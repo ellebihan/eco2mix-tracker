@@ -20,15 +20,19 @@ def preprocess_data(dataframe):
 
 @st.cache_data
 def load_data():
-   bikes_data_path = Path() / 'data/bike_sharing_demand_train.csv'
-   data = pd.read_csv(bikes_data_path)
+   data_path = Path() / 'data/imports/eco2mix/eco2mix_rte_2025-07-01.csv'
+   data = pd.read_csv(data_path)
    return data
 
 df = load_data()
 
+'''
 df_preprocessed = preprocess_data(df.copy())
 mean_counts_by_hour = pd.DataFrame(df_preprocessed.groupby(['hour', 'season'], sort=True)['count'].mean()).reset_index()
+'''
+mean_counts_by_hour = pd.DataFrame(df.groupby('Heures', sort=True)['count'].mean()).reset_index()
 fig1 = px.bar(mean_counts_by_hour, x='hour', y='count', color='season', height=400)
 barplot_chart = st.write(fig1)
+
 
 st.write(df)
