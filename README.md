@@ -28,10 +28,14 @@ La base de données sera ensuite accessible sur `localhost:5432`
 poetry run python bin/db.py init
 ```
 
-## Télécharger la méthodologie et les modèles de données cibles
+## Télécharger la méthodologie et les modèles de données cibles - standby
 
 Il s'agit d'une méthodologie reprenant les opérations de transformation effectuées (manuellement) depuis les données sources. Puis d'un ensemble de csv qui correspondent aux données transformées cibles.
 
 ```bash
 poetry run python ./common/utils/download_target_data.py
 ```
+
+## Installer Streamlit
+pip install streamlit
+pip install dash
