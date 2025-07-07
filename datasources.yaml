@@ -13,4 +13,10 @@ domains:
         type: metadonnees_api
         url: https://api.insee.fr/metadonnees/V1/geo/communes
         format: json
+  fiscalite:
+    sources:
+      - name: taux
+        type: metadonnees_api
+        url: https://data.economie.gouv.fr/explore/dataset/fiscalite-locale-des-particuliers/export/?&sort=insee_com&disjunctive.insee_com=true&refine.exercice=2024&refine.reg=53&refine.dep=29
+        format: json
 
