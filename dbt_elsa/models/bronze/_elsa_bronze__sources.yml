@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    tables:
+      - name: fiscalite
+        description: Source JSON loadée dans le champ data
+        loaded_at_field: created_at
