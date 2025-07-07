@@ -19,4 +19,10 @@ domains:
         type: metadonnees_api
         url: https://data.economie.gouv.fr/explore/dataset/fiscalite-locale-des-particuliers/export/?&sort=insee_com&disjunctive.insee_com=true&refine.exercice=2024&refine.reg=53&refine.dep=29
         format: json
-
+  rte:
+    sources:
+      - name: 
+        type:  metadonnees_api
+        url: https://digital.iservices.rte-france.com/open_api/eco2mix-national-tr/raw
+        format: json
+        api_key: "TA_CLE_API"
