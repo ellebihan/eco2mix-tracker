@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: production_journaliere
+    materialized: table
+    description: >
+      The aim of this table is to track daily energy production
+    columns:
+      - name: datetime_production
+        data_type: datetime
+        description: "{{ doc('datetime') }}"
+        tests:
+          - not_null
+      - name: perimetre
+        data_type: varchar
+        description: "{{ doc('perimetre') }}"
+        tests:
+          - not_null
+      - name: nature
+        data_type: varchar
+        description: "{{ doc('nature') }}"
+        tests:
+          - not_null
+      - name: consommation
+        data_type: float
+        description: "{{ doc('consommation') }}"
+      - name: prevision
+        data_type: float
+        description: "{{ doc('prevision') }}"
+      - name: nucleaire
+        data_type: float
+        description: "{{ doc('nucleaire') }}"
+    columns:
+      - name: gaz
+        data_type: float
+        description: "{{ doc('gaz') }}"
+    columns:
+      - name: charbon
+        data_type: float
+        description: "{{ doc('charbon') }}"
+    columns:
+      - name: solaire
+        data_type: float
+        description: "{{ doc('solaire') }}"
+    columns:
+      - name: eolien
+        data_type: float
+        description: "{{ doc('eolien') }}"
+    columns:
+      - name: hydraulique
+        data_type: float
+        description: "{{ doc('hydraulique') }}"
+    columns:
+      - name: bioenergies
+        data_type: float
+        description: "{{ doc('bioenergies') }}"
+    columns:
+      - name: autres
+        data_type: float
+        description: "{{ doc('autres') }}"

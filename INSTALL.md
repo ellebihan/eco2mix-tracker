@@ -65,3 +65,7 @@ Mettre à jour les dépendances:
 ## Utiliser Tox pour tester votre code
 
     tox -vv
+
+## Installer Streamlit
+pip install streamlit
+pip install dash

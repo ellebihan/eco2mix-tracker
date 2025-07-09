@@ -20,3 +20,9 @@ domains:
         url: https://data.economie.gouv.fr/explore/dataset/fiscalite-locale-des-particuliers/export/?&sort=insee_com&disjunctive.insee_com=true&refine.exercice=2024&refine.reg=53&refine.dep=29
         format: json
 
+  eco2mix:
+    sources:
+      - name: rte
+        type: metadonnees_api
+        url: "test"
+        format: csv

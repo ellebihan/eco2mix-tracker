@@ -36,6 +36,10 @@ Il s'agit d'une méthodologie reprenant les opérations de transformation effect
 poetry run python ./common/utils/download_target_data.py
 ```
 
-## Installer Streamlit
-pip install streamlit
-pip install dash
+## Pour stocker les données de l'API Dans un JSON
+
+```
+poetry run python scripts/db.py init
+poetry run python /scripts/extract.py --domain eco2mix
+poetry run python /scripts/load.py --domain eco2mix
+```
