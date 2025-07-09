@@ -1,10 +1,36 @@
 # Referential
 
+{% docs id %}
+ ID of the row
+{% enddocs %}
+
+{% docs data %}
+ jsonb containing all the source columns of the JSON or CSV file
+{% enddocs %}
+
 {% docs timestamp %}
  Timestamp
 {% enddocs %}
 
-# Energy
+# Energy Dimensions
+
+{% docs perimetre %}
+ Country of the production
+{% enddocs %}
+
+{% docs nature %}
+ Nature of the data : temporal data for instance
+{% enddocs %}
+
+# Energy Metrics
+
+{% docs consommation %}
+ Consommation of energy for the country and datetime, in TWH
+{% enddocs %}
+
+{% docs prevision %}
+ Consommation prevision of energy for the country and datetime, in TWH
+{% enddocs %}
 
 {% docs nucleaire %}
  Production for nuclear energy in TWH
@@ -37,3 +63,4 @@
 {% docs autres %}
  Production for other energy in TWH
 {% enddocs %}
+

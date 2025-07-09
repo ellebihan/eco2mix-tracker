@@ -1,11 +1,7 @@
+# But : mettre le CSV dans un data frame
+
 from pathlib import Path
 import pandas as pd
-import streamlit as st
-
-from dash import Dash, dcc, html, Input, Output
-import plotly.express as px
-import calendar
-from datetime import datetime
 
 '''
 def preprocess_data(dataframe):
@@ -19,21 +15,10 @@ def preprocess_data(dataframe):
     return dataframe
 '''
 
-@st.cache_data
 def load_data():
    data_path = Path() / 'data/imports/eco2mix/eco2mix_rte_2025-07-01.csv'
    data = pd.read_csv(data_path)
    return data
 
 df = load_data()
-
-'''
-df_preprocessed = preprocess_data(df.copy())
-mean_counts_by_hour = pd.DataFrame(df_preprocessed.groupby(['hour', 'season'], sort=True)['count'].mean()).reset_index()
-'''
-mean_counts_by_hour = pd.DataFrame(df.groupby('Heures', sort=True)['count'].mean()).reset_index()
-fig1 = px.bar(mean_counts_by_hour, x='hour', y='count', color='season', height=400)
-barplot_chart = st.write(fig1)
-
-
-st.write(df)
+# df.to_sql("production_journaliere", engine, if_exists="append", index=False)

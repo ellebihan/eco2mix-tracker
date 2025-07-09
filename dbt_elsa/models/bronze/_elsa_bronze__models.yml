@@ -6,40 +6,16 @@ models:
     description: >
       The aim of this table is to track daily energy production
     columns:
-      - name: timestamp
-        data_type: datetime
-        description: "{{ doc('timestamp') }}"
+      - name: id
+        data_type: integer
+        description: "{{ doc('id') }}"
         tests:
           - not_null
     columns:
-      - name: nucleaire
-        data_type: float
-        description: "{{ doc('nucleaire') }}"
+      - name: data
+        data_type: jsonb
+        description: "{{ doc('data') }}"
     columns:
-      - name: gaz
-        data_type: float
-        description: "{{ doc('gaz') }}"
-    columns:
-      - name: charbon
-        data_type: float
-        description: "{{ doc('charbon') }}"
-    columns:
-      - name: solaire
-        data_type: float
-        description: "{{ doc('solaire') }}"
-    columns:
-      - name: eolien
-        data_type: float
-        description: "{{ doc('eolien') }}"
-    columns:
-      - name: hydraulique
-        data_type: float
-        description: "{{ doc('hydraulique') }}"
-    columns:
-      - name: bioenergies
-        data_type: float
-        description: "{{ doc('bioenergies') }}"
-    columns:
-      - name: autres
-        data_type: float
-        description: "{{ doc('autres') }}"
+      - name: created_at
+        data_type: datetime
+        description: "{{ doc('timestamp') }}"

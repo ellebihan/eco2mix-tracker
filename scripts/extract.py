@@ -1,3 +1,5 @@
+# But : lire datasources.yaml pour stocker le JSON dans data/imports / domain
+
 #!/usr/bin/env python3
 import argparse
 import sys

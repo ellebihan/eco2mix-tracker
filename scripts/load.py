@@ -1,3 +1,5 @@
+# But : stocker le json dans une table du schema bronze
+
 #!/usr/bin/env python3
 import argparse
 import sys
@@ -16,8 +18,12 @@ def parse_args():
 
 def get_data_loader(source_format):
     data_loaders = {
-        'json': JsonDataLoader,
+        'json': JsonDataLoader, 
+        'csv': JsonDataLoader,
     }
+    if source_format not in data_loaders:
+        raise ValueError(f"Unsupported format: {source_format}")
+
     return data_loaders.get(source_format)
 
 def load_data(config, domain=None):
