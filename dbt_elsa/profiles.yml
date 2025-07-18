@@ -1,0 +1,12 @@
+dbt_odis:
+  target: dev_live
+  outputs:
+    dev_live:
+      dbname: elsa
+      host: localhost
+      pass: odis
+      port: 5432
+      schema: bronze
+      threads: 16
+      type: postgres
+      user: elsalebihan

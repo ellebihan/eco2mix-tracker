@@ -1,5 +1,6 @@
 CREATE TABLE production_journaliere (
-    timestamp TIMESTAMP,
+    date date,
+    heure time,
     nucleaire FLOAT,
     gaz FLOAT,
     charbon FLOAT,

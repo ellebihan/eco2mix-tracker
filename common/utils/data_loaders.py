@@ -20,7 +20,7 @@ class JsonDataLoader(DataLoader):
         # read data
         file_path = Path(f"data/imports/{domain}/{dataset_name}.json")
         if not file_path.exists():
-                raise FileNotFoundError(f"JSON file not found at {file_path}")
+            raise FileNotFoundError(f"JSON file not found at {file_path}")
         
         try:
             with open(file_path, 'r') as f:

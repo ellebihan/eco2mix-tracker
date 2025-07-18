@@ -17,6 +17,21 @@ domains:
     sources:
       - name: taux
         type: metadonnees_api
-        url: https://data.economie.gouv.fr/explore/dataset/fiscalite-locale-des-particuliers/export/?&sort=insee_com&disjunctive.insee_com=true&refine.exercice=2024&refine.reg=53&refine.dep=29
+        url: https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/fiscalite-locale-des-particuliers/exports/json?lang=fr&refine=exercice%3A%222024%22&refine=reg%3A%2253%22&refine=dep%3A%2229%22&timezone=Europe%2FParis
         format: json
+        headers:
+          Accept: "application/json"
 
+  rte:
+    sources:
+      - name: eco2mix
+        type: metadonnees_api
+        url: https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco2mix-national-tr/records?limit=20
+        format: json
+        response_path: results
+        headers:
+          Accept: "application/json"
+        params:
+          dataset: "eco2mix-national-tr"
+          rows: 96  # 24h x 4 (cas du quart d'heure possible)
+          q: ""
