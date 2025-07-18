@@ -20,7 +20,7 @@ def preprocess_data(dataframe):
 
 @st.cache_data
 def load_data():
-   data_path = Path() / 'data/imports/eco2mix/eco2mix_rte_2025-07-01.csv'
+   data_path = Path() / 'data/imports/rte/eco2mix_rte_2025-07-01.csv'
    data = pd.read_csv(data_path)
    return data
 

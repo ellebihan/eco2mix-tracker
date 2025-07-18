@@ -10,7 +10,7 @@ load_dotenv()
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Load raw data in database bronze layer')
-    parser.add_argument('--domain', help='Load data for specific domain only')
+    parser.add_argument('--domain', default='rte', help='Load data for specific domain only')
     parser.add_argument('--config', default='datasources.yaml', help='Path to datasources config file')
     return parser.parse_args()
 
