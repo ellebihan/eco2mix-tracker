@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: consumption_history
+    materialized: table
+    description: >
+      The aim of this table is to consolidate history data for consumption
+    columns:
+      - name: created_at
+        data_type: datetime
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: date
+        data_type: date
+        description: "{{ doc('date') }}"
+        tests:
+          - not_null
+      - name: filiere
+        data_type: text
+        description: "{{ doc('filiere') }}"
+      - name: volume
+        data_type: integer
+        description: "{{ doc('volume') }}"

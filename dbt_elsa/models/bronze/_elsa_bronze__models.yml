@@ -1,53 +1,56 @@
 version: 2
 
 models:
-  - name: production_journaliere
+  - name: consumption
     materialized: table
     description: >
-      The aim of this table is to track daily energy production
+      The aim of this table is to track houtly energy consumption for a given day
     columns:
-      - name: timestamp
-        data_type: datetime
-        description: "{{ doc('timestamp') }}"
+      - name: id
+        data_type: integer
+        description: "{{ doc('id') }}"
         tests:
           - not_null
-    columns:
+      - name: created_at
+        data_type: datetime
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: date
+        data_type: date
+        description: "{{ doc('date') }}"
+        tests:
+          - not_null
+      - name: time
+        data_type: time
+        description: "{{ doc('time') }}"
       - name: gaz
-        data_type: float
+        data_type: integer
         description: "{{ doc('gaz') }}"
-    columns:
       - name: nucleaire
-        data_type: float
+        data_type: integer
         description: "{{ doc('nucleaire') }}"
-    columns:
       - name: charbon
-        data_type: float
+        data_type: integer
         description: "{{ doc('charbon') }}"
-    columns:
       - name: solaire
-        data_type: float
+        data_type: integer
         description: "{{ doc('solaire') }}"
-    columns:
       - name: eolien
-        data_type: float
+        data_type: integer
         description: "{{ doc('eolien') }}"
-    columns:
       - name: hydraulique
-        data_type: float
+        data_type: integer
         description: "{{ doc('hydraulique') }}"
-    columns:
       - name: bioenergies
-        data_type: float
+        data_type: integer
         description: "{{ doc('bioenergies') }}"
-    columns:
       - name: autres
-        data_type: float
+        data_type: integer
         description: "{{ doc('autres') }}"
-    columns:
       - name: prevision_j
-        data_type: float
+        data_type: integer
         description: "{{ doc('prevision_j') }}"
-    columns:
       - name: prevision_j1
-        data_type: float
+        data_type: integer
         description: "{{ doc('prevision_j1') }}"
