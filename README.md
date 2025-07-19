@@ -1,6 +1,7 @@
-# test
+# Eco2mix Tracker
 
-À compléter...
+Projet démo 
+Utilise les données de RTE : consommation d'électricité en temps réel en France par filière d'énergie.
 
 Inspiré de Odis : DataForGood saison 13.
 
@@ -12,6 +13,13 @@ Pour prendre en main ce repository et installer les dépendances du projet :
 ```bash
 cp .env.dist .env
 poetry install
+
+pip3 –-version 
+brew install postgresql
+pip3 install psycopg2   
+pip3 install boto3
+pip install --upgrade pip
+pip install requests
 ```
 
 ## Pour démarrer la base de données en local
@@ -35,6 +43,15 @@ Il s'agit d'une méthodologie reprenant les opérations de transformation effect
 ```bash
 poetry run python ./common/utils/download_target_data.py
 ```
+
+## Installer dbt
+```bash
+pip install dbt-core
+# Adapter pour PostgreSQL
+pip install dbt-postgres
+# Vérifier l’installation
+dbt --version
+``` 
 
 ## Installer Streamlit
 pip install streamlit

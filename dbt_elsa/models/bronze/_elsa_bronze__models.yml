@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: consumption
+    materialized: table
+    description: >
+      The aim of this table is to track houtly energy consumption for a given day
+    columns:
+      - name: id
+        data_type: integer
+        description: "{{ doc('id') }}"
+        tests:
+          - not_null
+      - name: created_at
+        data_type: datetime
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: date
+        data_type: date
+        description: "{{ doc('date') }}"
+        tests:
+          - not_null
+      - name: time
+        data_type: time
+        description: "{{ doc('time') }}"
+      - name: gaz
+        data_type: integer
+        description: "{{ doc('gaz') }}"
+      - name: nucleaire
+        data_type: integer
+        description: "{{ doc('nucleaire') }}"
+      - name: charbon
+        data_type: integer
+        description: "{{ doc('charbon') }}"
+      - name: solaire
+        data_type: integer
+        description: "{{ doc('solaire') }}"
+      - name: eolien
+        data_type: integer
+        description: "{{ doc('eolien') }}"
+      - name: hydraulique
+        data_type: integer
+        description: "{{ doc('hydraulique') }}"
+      - name: bioenergies
+        data_type: integer
+        description: "{{ doc('bioenergies') }}"
+      - name: autres
+        data_type: integer
+        description: "{{ doc('autres') }}"
+      - name: prevision_j
+        data_type: integer
+        description: "{{ doc('prevision_j') }}"
+      - name: prevision_j1
+        data_type: integer
+        description: "{{ doc('prevision_j1') }}"
