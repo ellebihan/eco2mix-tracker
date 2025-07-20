@@ -2,13 +2,13 @@ dbt_elsa:
   target: dev_live
   outputs:
     dev_live:
-      dbname: elsa
-      host: localhost
-      pass: elsa
-      port: 5432
-      schema: bronze
-      threads: 16
       type: postgres
-      user: elsalebihan
+      threads: 16
+      host: db_airflow
+      port: 5432
+      user: airflow
+      password: airflow        
+      dbname: airflow
+      schema: bronze           # ➜ schema par défaut, tu peux l’écraser dans dbt_project.yml
 
   

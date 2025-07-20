@@ -33872,3 +33872,386 @@ parsing.
 [0m10:48:34.070621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1dbbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d1d39b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c66ec50>]}
 [0m10:48:34.071022 [debug] [MainThread]: Flushing usage events
 [0m10:48:34.523040 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:50:36.055581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4f2d570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db35b0280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db35b0220>]}
+
+
+============================== 19:50:36.063294 | c1a35cd3-6338-40c0-b869-7935ecdb3f8a ==============================
+[0m19:50:36.063294 [info ] [MainThread]: Running with dbt=1.10.4
+[0m19:50:36.065213 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt_elsa', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt_elsa/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:50:36.276554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c1a35cd3-6338-40c0-b869-7935ecdb3f8a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db7683f10>]}
+[0m19:50:36.884629 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-sbk9napg'
+[0m19:50:36.885770 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m19:50:37.075758 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m19:50:37.081109 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m19:50:37.233661 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m19:50:37.247392 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m19:50:37.380285 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m19:50:37.392188 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/elementary-data/elementary.json
+[0m19:50:37.558431 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/elementary-data/elementary.json 200
+[0m19:50:37.574574 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json
+[0m19:50:37.704224 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/godatadriven/dbt_date.json 200
+[0m19:50:37.713471 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m19:50:39.118446 [info ] [MainThread]: Installed from version 1.3.0
+[0m19:50:39.119803 [info ] [MainThread]: Up to date!
+[0m19:50:39.121315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c1a35cd3-6338-40c0-b869-7935ecdb3f8a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4c2fbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db34fc7f0>]}
+[0m19:50:39.122806 [info ] [MainThread]: Installing metaplane/dbt_expectations
+[0m19:50:40.258851 [info ] [MainThread]: Installed from version 0.10.9
+[0m19:50:40.260005 [info ] [MainThread]: Up to date!
+[0m19:50:40.261309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c1a35cd3-6338-40c0-b869-7935ecdb3f8a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4c2fbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db33e13f0>]}
+[0m19:50:40.262639 [info ] [MainThread]: Installing elementary-data/elementary
+[0m19:50:42.076086 [info ] [MainThread]: Installed from version 0.19.0
+[0m19:50:42.077957 [info ] [MainThread]: Updated version available: 0.19.1
+[0m19:50:42.080429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c1a35cd3-6338-40c0-b869-7935ecdb3f8a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4c2fbe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db33e2440>]}
+[0m19:50:42.082142 [info ] [MainThread]: Installing godatadriven/dbt_date
+[0m19:50:42.752700 [info ] [MainThread]: Installed from version 0.14.2
+[0m19:50:42.754138 [info ] [MainThread]: Up to date!
+[0m19:50:42.755842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'c1a35cd3-6338-40c0-b869-7935ecdb3f8a', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db33e22c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db33e1f90>]}
+[0m19:50:42.757088 [info ] [MainThread]: 
+[0m19:50:42.758322 [info ] [MainThread]: Updates available for packages: ['elementary-data/elementary']                 
+Update your versions in packages.yml, then run dbt deps
+[0m19:50:42.763255 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 6.798944, "process_in_blocks": "0", "process_kernel_time": 0.556298, "process_mem_max_rss": "110868", "process_out_blocks": "23556", "process_user_time": 4.192992}
+[0m19:50:42.766761 [debug] [MainThread]: Command `dbt deps` succeeded at 19:50:42.765938 after 6.80 seconds
+[0m19:50:42.768338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4f2d570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4a5d6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7db4a5da20>]}
+[0m19:50:42.769438 [debug] [MainThread]: Flushing usage events
+[0m19:50:43.281859 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:50:52.911059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2169b4a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2153d8250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2153d81f0>]}
+
+
+============================== 19:50:52.918848 | f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc ==============================
+[0m19:50:52.918848 [info ] [MainThread]: Running with dbt=1.10.4
+[0m19:50:52.920151 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt_elsa/logs', 'profiles_dir': '/opt/airflow/dbt_elsa', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --select bronze', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:50:53.245100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2155e9c60>]}
+[0m19:50:53.340147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff217c99e40>]}
+[0m19:50:53.341724 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:50:53.515177 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m19:50:53.840531 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m19:50:53.842110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2161a22c0>]}
+[0m19:51:02.062251 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m19:51:02.087886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2152d5090>]}
+[0m19:51:02.434807 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m19:51:02.440968 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m19:51:02.473952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21396f850>]}
+[0m19:51:02.475156 [info ] [MainThread]: Found 32 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m19:51:02.476366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21396faf0>]}
+[0m19:51:02.479743 [info ] [MainThread]: 
+[0m19:51:02.481279 [info ] [MainThread]: Concurrency: 16 threads (target='dev_live')
+[0m19:51:02.483871 [info ] [MainThread]: 
+[0m19:51:02.486208 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:51:02.488185 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m19:51:02.541748 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m19:51:02.542894 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:51:02.543810 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:51:02.554603 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.011 seconds
+[0m19:51:02.556771 [debug] [ThreadPool]: On list_airflow: Close
+[0m19:51:02.558420 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now create_airflow_bronze)
+[0m19:51:02.559963 [debug] [ThreadPool]: Creating schema "database: "airflow"
+schema: "bronze"
+"
+[0m19:51:02.570908 [debug] [ThreadPool]: Using postgres connection "create_airflow_bronze"
+[0m19:51:02.571898 [debug] [ThreadPool]: On create_airflow_bronze: BEGIN
+[0m19:51:02.572648 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:51:02.582334 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m19:51:02.583445 [debug] [ThreadPool]: Using postgres connection "create_airflow_bronze"
+[0m19:51:02.584325 [debug] [ThreadPool]: On create_airflow_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "connection_name": "create_airflow_bronze"} */
+create schema if not exists "bronze"
+[0m19:51:02.585902 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m19:51:02.587323 [debug] [ThreadPool]: On create_airflow_bronze: COMMIT
+[0m19:51:02.588143 [debug] [ThreadPool]: Using postgres connection "create_airflow_bronze"
+[0m19:51:02.588825 [debug] [ThreadPool]: On create_airflow_bronze: COMMIT
+[0m19:51:02.590459 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m19:51:02.591553 [debug] [ThreadPool]: On create_airflow_bronze: Close
+[0m19:51:02.602114 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_airflow_bronze, now list_airflow_bronze)
+[0m19:51:02.603271 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_tec_elsa'
+[0m19:51:02.610245 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow_silver'
+[0m19:51:02.617939 [debug] [ThreadPool]: Using postgres connection "list_airflow_bronze"
+[0m19:51:02.624934 [debug] [ThreadPool]: Using postgres connection "list_airflow_tec_elsa"
+[0m19:51:02.711330 [debug] [ThreadPool]: Using postgres connection "list_airflow_silver"
+[0m19:51:02.712641 [debug] [ThreadPool]: On list_airflow_bronze: BEGIN
+[0m19:51:02.714314 [debug] [ThreadPool]: On list_airflow_tec_elsa: BEGIN
+[0m19:51:02.716180 [debug] [ThreadPool]: On list_airflow_silver: BEGIN
+[0m19:51:02.717590 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:51:02.718777 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:51:02.719893 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:51:02.733497 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m19:51:02.734472 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m19:51:02.735388 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m19:51:02.736046 [debug] [ThreadPool]: Using postgres connection "list_airflow_bronze"
+[0m19:51:02.737091 [debug] [ThreadPool]: Using postgres connection "list_airflow_tec_elsa"
+[0m19:51:02.738169 [debug] [ThreadPool]: Using postgres connection "list_airflow_silver"
+[0m19:51:02.739319 [debug] [ThreadPool]: On list_airflow_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "connection_name": "list_airflow_bronze"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m19:51:02.740686 [debug] [ThreadPool]: On list_airflow_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "connection_name": "list_airflow_tec_elsa"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m19:51:02.741939 [debug] [ThreadPool]: On list_airflow_silver: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "connection_name": "list_airflow_silver"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'silver'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'silver'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'silver'
+  
+[0m19:51:02.746467 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m19:51:02.747416 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:51:02.749646 [debug] [ThreadPool]: On list_airflow_tec_elsa: ROLLBACK
+[0m19:51:02.751762 [debug] [ThreadPool]: On list_airflow_bronze: ROLLBACK
+[0m19:51:02.752409 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:51:02.753503 [debug] [ThreadPool]: On list_airflow_tec_elsa: Close
+[0m19:51:02.754273 [debug] [ThreadPool]: On list_airflow_bronze: Close
+[0m19:51:02.755768 [debug] [ThreadPool]: On list_airflow_silver: ROLLBACK
+[0m19:51:02.759919 [debug] [ThreadPool]: On list_airflow_silver: Close
+[0m19:51:02.776553 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:02.777858 [debug] [MainThread]: On master: BEGIN
+[0m19:51:02.778698 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:51:02.788251 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m19:51:02.789657 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:02.790913 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:51:02.796707 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m19:51:02.799918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff21467bc70>]}
+[0m19:51:02.801912 [debug] [MainThread]: On master: ROLLBACK
+[0m19:51:02.803217 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:02.804407 [debug] [MainThread]: On master: BEGIN
+[0m19:51:02.805937 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m19:51:02.807772 [debug] [MainThread]: On master: COMMIT
+[0m19:51:02.808886 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:02.809789 [debug] [MainThread]: On master: COMMIT
+[0m19:51:02.810926 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:51:02.846361 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m19:51:02.856823 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m19:51:02.866002 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m19:51:02.867735 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.06s]
+[0m19:51:02.868852 [info ] [MainThread]: 
+[0m19:51:02.870048 [debug] [MainThread]: On master: Close
+[0m19:51:02.884168 [debug] [Thread-1 (]: Began running node model.dbt_elsa.consumption
+[0m19:51:02.885444 [info ] [Thread-1 (]: 1 of 1 START sql table model bronze.consumption ................................ [RUN]
+[0m19:51:02.886919 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_silver, now model.dbt_elsa.consumption)
+[0m19:51:02.887946 [debug] [Thread-1 (]: Began compiling node model.dbt_elsa.consumption
+[0m19:51:02.896484 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_elsa.consumption"
+[0m19:51:02.901655 [debug] [Thread-1 (]: Began executing node model.dbt_elsa.consumption
+[0m19:51:02.966221 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_elsa.consumption"
+[0m19:51:02.970152 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m19:51:02.971135 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: BEGIN
+[0m19:51:02.971957 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:51:02.982107 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m19:51:02.983251 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m19:51:02.984269 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_live", "node_id": "model.dbt_elsa.consumption"} */
+
+  
+    
+
+  create  table "airflow"."bronze"."consumption__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    id,
+    created_at,
+    (data->>'date')::date AS date,
+    (data->>'heure')::time AS heure,   
+    (data->>'gaz')::int AS gaz,
+    (data->>'nucleaire')::int AS nucleaire,
+    (data->>'charbon')::int AS charbon,
+    (data->>'solaire')::int AS solaire,
+    (data->>'eolien')::int AS eolien,
+    (data->>'hydraulique')::int AS hydraulique,
+    (data->>'bioenergies')::int AS bioenergies,
+    (data->>'autres')::int AS autres,
+    (data->>'prevision_j')::int AS prevision_j,
+    (data->>'prevision_j1')::int AS prevision_j1
+FROM "airflow"."bronze"."rte_eco2mix"
+  );
+  
+[0m19:51:02.985819 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "bronze.rte_eco2mix" does not exist
+LINE 27: FROM "airflow"."bronze"."rte_eco2mix"
+              ^
+
+[0m19:51:02.986715 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: ROLLBACK
+[0m19:51:02.987949 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: Close
+[0m19:51:02.991766 [debug] [Thread-1 (]: Database Error in model consumption (models/bronze/consumption.sql)
+  relation "bronze.rte_eco2mix" does not exist
+  LINE 27: FROM "airflow"."bronze"."rte_eco2mix"
+                ^
+  compiled code at target/run/dbt_elsa/models/bronze/consumption.sql
+[0m19:51:02.994374 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f0ec24d2-6fd8-4a17-95a8-5b14b4ae33bc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2141367a0>]}
+[0m19:51:02.996045 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model bronze.consumption ....................... [[31mERROR[0m in 0.11s]
+[0m19:51:02.997934 [debug] [Thread-1 (]: Finished running node model.dbt_elsa.consumption
+[0m19:51:02.999234 [debug] [Thread-19 ]: Marking all children of 'model.dbt_elsa.consumption' to be skipped because of status 'error'.  Reason: Database Error in model consumption (models/bronze/consumption.sql)
+  relation "bronze.rte_eco2mix" does not exist
+  LINE 27: FROM "airflow"."bronze"."rte_eco2mix"
+                ^
+  compiled code at target/run/dbt_elsa/models/bronze/consumption.sql.
+[0m19:51:03.004127 [info ] [MainThread]: 
+[0m19:51:03.006411 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:03.007669 [debug] [MainThread]: On master: BEGIN
+[0m19:51:03.008605 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:51:03.018655 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m19:51:03.019552 [debug] [MainThread]: On master: COMMIT
+[0m19:51:03.020400 [debug] [MainThread]: Using postgres connection "master"
+[0m19:51:03.021222 [debug] [MainThread]: On master: COMMIT
+[0m19:51:03.022209 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:51:03.060358 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m19:51:03.068877 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m19:51:03.105965 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m19:51:03.109129 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m19:51:03.110915 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.09s]
+[0m19:51:03.112013 [debug] [MainThread]: On master: Close
+[0m19:51:03.113183 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:51:03.114229 [debug] [MainThread]: Connection 'list_airflow_bronze' was properly closed.
+[0m19:51:03.115422 [debug] [MainThread]: Connection 'list_airflow_tec_elsa' was properly closed.
+[0m19:51:03.116257 [debug] [MainThread]: Connection 'model.dbt_elsa.consumption' was properly closed.
+[0m19:51:03.117319 [info ] [MainThread]: 
+[0m19:51:03.118802 [info ] [MainThread]: Finished running 2 project hooks, 1 table model in 0 hours 0 minutes and 0.63 seconds (0.63s).
+[0m19:51:03.121946 [debug] [MainThread]: Command end result
+[0m19:51:03.333078 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m19:51:03.336757 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m19:51:03.347652 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m19:51:03.348460 [info ] [MainThread]: 
+[0m19:51:03.349400 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m19:51:03.350452 [info ] [MainThread]: 
+[0m19:51:03.351767 [error] [MainThread]: [31mFailure in model consumption (models/bronze/consumption.sql)[0m
+[0m19:51:03.352817 [error] [MainThread]:   Database Error in model consumption (models/bronze/consumption.sql)
+  relation "bronze.rte_eco2mix" does not exist
+  LINE 27: FROM "airflow"."bronze"."rte_eco2mix"
+                ^
+  compiled code at target/run/dbt_elsa/models/bronze/consumption.sql
+[0m19:51:03.353871 [info ] [MainThread]: 
+[0m19:51:03.354958 [info ] [MainThread]:   compiled code at target/compiled/dbt_elsa/models/bronze/consumption.sql
+[0m19:51:03.356178 [info ] [MainThread]: 
+[0m19:51:03.358607 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[0m19:51:03.361076 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 10.535316, "process_in_blocks": "0", "process_kernel_time": 0.373296, "process_mem_max_rss": "138180", "process_out_blocks": "12363", "process_user_time": 12.027546}
+[0m19:51:03.362348 [debug] [MainThread]: Command `dbt run` failed at 19:51:03.362205 after 10.54 seconds
+[0m19:51:03.365131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2169b4a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2168483d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff213525960>]}
+[0m19:51:03.366214 [debug] [MainThread]: Flushing usage events
+[0m19:51:04.902068 [debug] [MainThread]: An error was encountered while trying to flush usage events
