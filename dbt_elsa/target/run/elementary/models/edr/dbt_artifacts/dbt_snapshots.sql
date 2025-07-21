@@ -3,7 +3,7 @@
   
     
 
-  create  table "elsa"."bronze_tec_elsa"."dbt_snapshots"
+  create  table "elsa"."tec_elsa"."dbt_snapshots"
   
   
     as

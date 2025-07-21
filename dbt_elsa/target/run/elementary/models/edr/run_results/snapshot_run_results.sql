@@ -1,16 +1,16 @@
 
-  create view "elsa"."bronze_tec_elsa"."snapshot_run_results__dbt_tmp"
+  create view "elsa"."tec_elsa"."snapshot_run_results__dbt_tmp"
     
     
   as (
     
 
 with dbt_run_results as (
-    select * from "elsa"."bronze_tec_elsa"."dbt_run_results"
+    select * from "elsa"."tec_elsa"."dbt_run_results"
 ),
 
 dbt_snapshots as (
-    select * from "elsa"."bronze_tec_elsa"."dbt_snapshots"
+    select * from "elsa"."tec_elsa"."dbt_snapshots"
 )
 
 SELECT

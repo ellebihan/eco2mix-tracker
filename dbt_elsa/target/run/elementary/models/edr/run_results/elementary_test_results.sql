@@ -3,7 +3,7 @@
   
     
 
-  create  table "elsa"."bronze_tec_elsa"."elementary_test_results"
+  create  table "elsa"."tec_elsa"."elementary_test_results"
   
   
     as

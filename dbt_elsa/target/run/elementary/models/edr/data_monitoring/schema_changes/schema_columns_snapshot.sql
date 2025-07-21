@@ -3,7 +3,7 @@
   
     
 
-  create  table "elsa"."bronze_tec_elsa"."schema_columns_snapshot"
+  create  table "elsa"."tec_elsa"."schema_columns_snapshot"
   
   
     as

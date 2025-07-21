@@ -2,7 +2,7 @@
   
     
 
-  create  table "elsa"."bronze"."consumption__dbt_tmp"
+  create  table "dbelsa"."bronze"."consumption__dbt_tmp"
   
   
     as
@@ -23,6 +23,6 @@
     (data->>'autres')::int AS autres,
     (data->>'prevision_j')::int AS prevision_j,
     (data->>'prevision_j1')::int AS prevision_j1
-FROM "elsa"."bronze"."rte_eco2mix"
+FROM bronze.rte_eco2mix
   );
   

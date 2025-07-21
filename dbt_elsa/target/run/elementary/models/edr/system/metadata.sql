@@ -2,7 +2,7 @@
   
     
 
-  create  table "elsa"."bronze_tec_elsa"."metadata__dbt_tmp"
+  create  table "elsa"."tec_elsa"."metadata__dbt_tmp"
   
   
     as

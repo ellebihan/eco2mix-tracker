@@ -1,5 +1,5 @@
 
-  create view "elsa"."bronze_tec_elsa"."job_run_results__dbt_tmp"
+  create view "elsa"."tec_elsa"."job_run_results__dbt_tmp"
     
     
   as (
@@ -47,7 +47,7 @@ min(cast(run_started_at as timestamp))
 )::timestamp)))
     
  as job_run_execution_time
-  from "elsa"."bronze_tec_elsa"."dbt_invocations"
+  from "elsa"."tec_elsa"."dbt_invocations"
   where job_id is not null
   group by job_name, job_id, job_run_id
 )

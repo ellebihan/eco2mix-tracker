@@ -1,16 +1,16 @@
 
-  create view "elsa"."bronze_tec_elsa"."alerts_dbt_source_freshness__dbt_tmp"
+  create view "elsa"."tec_elsa"."alerts_dbt_source_freshness__dbt_tmp"
     
     
   as (
     
 
 with results as (
-  select * from "elsa"."bronze_tec_elsa"."dbt_source_freshness_results"
+  select * from "elsa"."tec_elsa"."dbt_source_freshness_results"
 ),
 
 sources as (
-  select * from "elsa"."bronze_tec_elsa"."dbt_sources"
+  select * from "elsa"."tec_elsa"."dbt_sources"
 )
 
 select

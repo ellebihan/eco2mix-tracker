@@ -1,11 +1,11 @@
 
 
 with dbt_run_results as (
-    select * from "elsa"."bronze_tec_elsa"."dbt_run_results"
+    select * from "elsa"."tec_elsa"."dbt_run_results"
 ),
 
 dbt_snapshots as (
-    select * from "elsa"."bronze_tec_elsa"."dbt_snapshots"
+    select * from "elsa"."tec_elsa"."dbt_snapshots"
 )
 
 SELECT

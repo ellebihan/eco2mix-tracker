@@ -3,7 +3,7 @@
   
     
 
-  create  table "elsa"."bronze_tec_elsa"."test_result_rows"
+  create  table "elsa"."tec_elsa"."test_result_rows"
   
   
     as
@@ -12,7 +12,7 @@
     -- indexes are not supported in all warehouses, relevant to postgres only
 
 
--- depends_on: "elsa"."bronze_tec_elsa"."elementary_test_results"
+-- depends_on: "elsa"."tec_elsa"."elementary_test_results"
 select * from (
             select
             
