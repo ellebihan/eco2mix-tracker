@@ -5,7 +5,7 @@
 
 
 select date
-from "elsa"."silver"."consumption_history"
+from "dbelsa"."bronze"."consumption_history"
 where date is null
 
 

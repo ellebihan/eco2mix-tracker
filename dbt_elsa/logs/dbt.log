@@ -46216,3 +46216,2413 @@ drop table if exists "dbelsa"."bronze"."consumption_history__dbt_backup" cascade
 [0m07:48:06.365768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f169435ca90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1692c12b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f16941f1150>]}
 [0m07:48:06.367019 [debug] [MainThread]: Flushing usage events
 [0m07:48:06.855137 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:20:11.214871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f443a7b2890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4438dd0280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4438dd0220>]}
+
+
+============================== 09:20:11.222201 | 972e0046-ca19-461c-a0b3-9d2a0f9d5583 ==============================
+[0m09:20:11.222201 [info ] [MainThread]: Running with dbt=1.10.4
+[0m09:20:11.223430 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/opt/airflow/dbt_elsa', 'log_path': '/opt/airflow/dbt_elsa/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:20:11.237004 [info ] [MainThread]: dbt version: 1.10.4
+[0m09:20:11.237930 [info ] [MainThread]: python version: 3.10.14
+[0m09:20:11.292422 [info ] [MainThread]: python path: /home/airflow/.local/bin/python
+[0m09:20:11.294171 [info ] [MainThread]: os info: Linux-6.10.14-linuxkit-x86_64-with-glibc2.36
+[0m09:20:11.418572 [info ] [MainThread]: Using profiles dir at /opt/airflow/dbt_elsa
+[0m09:20:11.419547 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/dbt_elsa/profiles.yml
+[0m09:20:11.420544 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_elsa/dbt_project.yml
+[0m09:20:11.421568 [info ] [MainThread]: adapter type: postgres
+[0m09:20:11.422371 [info ] [MainThread]: adapter version: 1.9.0
+[0m09:20:11.608980 [info ] [MainThread]: Configuration:
+[0m09:20:11.610315 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:20:11.612259 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:20:11.613327 [info ] [MainThread]: Required dependencies:
+[0m09:20:11.614176 [debug] [MainThread]: Executing "git --help"
+[0m09:20:11.616047 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m09:20:11.617023 [info ] [MainThread]: Connection:
+[0m09:20:11.617857 [info ] [MainThread]:   host: db
+[0m09:20:11.618765 [info ] [MainThread]:   port: 5432
+[0m09:20:11.620050 [info ] [MainThread]:   user: elsalebihan
+[0m09:20:11.620881 [info ] [MainThread]:   database: dbelsa
+[0m09:20:11.621743 [info ] [MainThread]:   schema: bronze
+[0m09:20:11.622616 [info ] [MainThread]:   connect_timeout: 10
+[0m09:20:11.623922 [info ] [MainThread]:   role: None
+[0m09:20:11.626405 [info ] [MainThread]:   search_path: None
+[0m09:20:11.630060 [info ] [MainThread]:   keepalives_idle: 0
+[0m09:20:11.630962 [info ] [MainThread]:   sslmode: None
+[0m09:20:11.631959 [info ] [MainThread]:   sslcert: None
+[0m09:20:11.634977 [info ] [MainThread]:   sslkey: None
+[0m09:20:11.636400 [info ] [MainThread]:   sslrootcert: None
+[0m09:20:11.637903 [info ] [MainThread]:   application_name: dbt
+[0m09:20:11.639926 [info ] [MainThread]:   retries: 1
+[0m09:20:11.641115 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m09:20:11.770928 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m09:20:11.824394 [debug] [MainThread]: Using postgres connection "debug"
+[0m09:20:11.825302 [debug] [MainThread]: On debug: select 1 as id
+[0m09:20:11.826256 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:20:11.843665 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "db" to address: Name or service not known
+
+[0m09:20:11.849058 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m09:20:11.849929 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m09:20:11.850832 [debug] [MainThread]: On debug: No close available on handle
+[0m09:20:11.851606 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m09:20:11.852447 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m09:20:11.853198 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m09:20:11.854129 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "db" to address: Name or service not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m09:20:11.855565 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.73109734, "process_in_blocks": "2696", "process_kernel_time": 0.27694, "process_mem_max_rss": "110584", "process_out_blocks": "737", "process_user_time": 3.07917}
+[0m09:20:11.856570 [debug] [MainThread]: Command `dbt debug` failed at 09:20:11.856438 after 0.73 seconds
+[0m09:20:11.857348 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:20:11.858171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f443a7b2890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4438d32aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f443a2be8c0>]}
+[0m09:20:11.858989 [debug] [MainThread]: Flushing usage events
+[0m09:20:12.385379 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:06:23.003033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bc4be560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bace8250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bace81f0>]}
+
+
+============================== 12:06:23.010935 | 32869aa7-777e-4a77-8e8f-280e704bec9c ==============================
+[0m12:06:23.010935 [info ] [MainThread]: Running with dbt=1.10.4
+[0m12:06:23.012436 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/opt/airflow/dbt_elsa/logs', 'profiles_dir': '/opt/airflow/dbt_elsa', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run --select bronze', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m12:06:23.304732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bc10fd00>]}
+[0m12:06:23.398858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bace88b0>]}
+[0m12:06:23.400759 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m12:06:23.578700 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m12:06:24.619655 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:06:24.620547 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:06:24.632947 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m12:06:24.735325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84b9354130>]}
+[0m12:06:25.090466 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m12:06:25.095248 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m12:06:25.163812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84b97e31f0>]}
+[0m12:06:25.165714 [info ] [MainThread]: Found 33 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m12:06:25.166871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84b97e1210>]}
+[0m12:06:25.170263 [info ] [MainThread]: 
+[0m12:06:25.171320 [info ] [MainThread]: Concurrency: 4 threads (target='dev_elsa')
+[0m12:06:25.172116 [info ] [MainThread]: 
+[0m12:06:25.173170 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:06:25.180417 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa'
+[0m12:06:25.235888 [debug] [ThreadPool]: Using postgres connection "list_dbelsa"
+[0m12:06:25.236970 [debug] [ThreadPool]: On list_dbelsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:06:25.237879 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:06:25.253581 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.016 seconds
+[0m12:06:25.255678 [debug] [ThreadPool]: On list_dbelsa: Close
+[0m12:06:25.257021 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbelsa, now create_dbelsa_bronze)
+[0m12:06:25.258287 [debug] [ThreadPool]: Creating schema "database: "dbelsa"
+schema: "bronze"
+"
+[0m12:06:25.269743 [debug] [ThreadPool]: Using postgres connection "create_dbelsa_bronze"
+[0m12:06:25.270831 [debug] [ThreadPool]: On create_dbelsa_bronze: BEGIN
+[0m12:06:25.271702 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:06:25.281550 [debug] [ThreadPool]: SQL status: BEGIN in 0.009 seconds
+[0m12:06:25.283294 [debug] [ThreadPool]: Using postgres connection "create_dbelsa_bronze"
+[0m12:06:25.284164 [debug] [ThreadPool]: On create_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "create_dbelsa_bronze"} */
+create schema if not exists "bronze"
+[0m12:06:25.285827 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.001 seconds
+[0m12:06:25.287842 [debug] [ThreadPool]: On create_dbelsa_bronze: COMMIT
+[0m12:06:25.289347 [debug] [ThreadPool]: Using postgres connection "create_dbelsa_bronze"
+[0m12:06:25.290734 [debug] [ThreadPool]: On create_dbelsa_bronze: COMMIT
+[0m12:06:25.292922 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m12:06:25.294338 [debug] [ThreadPool]: On create_dbelsa_bronze: Close
+[0m12:06:25.301581 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_dbelsa_bronze, now list_dbelsa_tec_elsa)
+[0m12:06:25.302841 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_bronze'
+[0m12:06:25.316730 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m12:06:25.401789 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m12:06:25.402580 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: BEGIN
+[0m12:06:25.403906 [debug] [ThreadPool]: On list_dbelsa_bronze: BEGIN
+[0m12:06:25.405348 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:06:25.406649 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:06:25.419955 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m12:06:25.421235 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m12:06:25.422918 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m12:06:25.424297 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m12:06:25.425757 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_tec_elsa"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m12:06:25.427720 [debug] [ThreadPool]: On list_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_bronze"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m12:06:25.435451 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.006 seconds
+[0m12:06:25.436140 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.006 seconds
+[0m12:06:25.438160 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: ROLLBACK
+[0m12:06:25.440143 [debug] [ThreadPool]: On list_dbelsa_bronze: ROLLBACK
+[0m12:06:25.441431 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: Close
+[0m12:06:25.442364 [debug] [ThreadPool]: On list_dbelsa_bronze: Close
+[0m12:06:25.456956 [debug] [MainThread]: Using postgres connection "master"
+[0m12:06:25.458210 [debug] [MainThread]: On master: BEGIN
+[0m12:06:25.459143 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:06:25.469358 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m12:06:25.470562 [debug] [MainThread]: Using postgres connection "master"
+[0m12:06:25.471591 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m12:06:25.476750 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m12:06:25.478995 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84b93e4280>]}
+[0m12:06:25.480119 [debug] [MainThread]: On master: ROLLBACK
+[0m12:06:25.481623 [debug] [MainThread]: Using postgres connection "master"
+[0m12:06:25.484435 [debug] [MainThread]: On master: BEGIN
+[0m12:06:25.486026 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m12:06:25.487066 [debug] [MainThread]: On master: COMMIT
+[0m12:06:25.487912 [debug] [MainThread]: Using postgres connection "master"
+[0m12:06:25.488699 [debug] [MainThread]: On master: COMMIT
+[0m12:06:25.489681 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:06:25.550238 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m12:06:25.558583 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m12:06:25.567918 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m12:06:25.569446 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.08s]
+[0m12:06:25.570461 [info ] [MainThread]: 
+[0m12:06:25.572257 [debug] [MainThread]: On master: Close
+[0m12:06:25.582879 [debug] [Thread-1 (]: Began running node model.dbt_elsa.consumption
+[0m12:06:25.583779 [debug] [Thread-2 (]: Began running node model.dbt_elsa.test_connection
+[0m12:06:25.585684 [info ] [Thread-1 (]: 1 of 2 START sql table model bronze.consumption ................................ [RUN]
+[0m12:06:25.588302 [info ] [Thread-2 (]: 2 of 2 START sql table model bronze.test_connection ............................ [RUN]
+[0m12:06:25.589833 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbelsa_bronze, now model.dbt_elsa.consumption)
+[0m12:06:25.591118 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_dbelsa_tec_elsa, now model.dbt_elsa.test_connection)
+[0m12:06:25.592538 [debug] [Thread-1 (]: Began compiling node model.dbt_elsa.consumption
+[0m12:06:25.594015 [debug] [Thread-2 (]: Began compiling node model.dbt_elsa.test_connection
+[0m12:06:25.601871 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_elsa.consumption"
+[0m12:06:25.609594 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_elsa.test_connection"
+[0m12:06:25.612679 [debug] [Thread-1 (]: Began executing node model.dbt_elsa.consumption
+[0m12:06:25.613535 [debug] [Thread-2 (]: Began executing node model.dbt_elsa.test_connection
+[0m12:06:25.717166 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_elsa.test_connection"
+[0m12:06:25.718137 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_elsa.consumption"
+[0m12:06:25.722798 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m12:06:25.724428 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: BEGIN
+[0m12:06:25.725581 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m12:06:25.723795 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m12:06:25.727432 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: BEGIN
+[0m12:06:25.728639 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:06:25.737110 [debug] [Thread-2 (]: SQL status: BEGIN in 0.011 seconds
+[0m12:06:25.738554 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m12:06:25.739606 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."test_connection__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select current_database() as db, current_schema() as schema
+  );
+  
+[0m12:06:25.740487 [debug] [Thread-1 (]: SQL status: BEGIN in 0.012 seconds
+[0m12:06:25.741842 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m12:06:25.744057 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."consumption__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    id,
+    created_at,
+    (data->>'date')::date AS date,
+    (data->>'heure')::time AS heure,   
+    (data->>'gaz')::int AS gaz,
+    (data->>'nucleaire')::int AS nucleaire,
+    (data->>'charbon')::int AS charbon,
+    (data->>'solaire')::int AS solaire,
+    (data->>'eolien')::int AS eolien,
+    (data->>'hydraulique')::int AS hydraulique,
+    (data->>'bioenergies')::int AS bioenergies,
+    (data->>'autres')::int AS autres,
+    (data->>'prevision_j')::int AS prevision_j,
+    (data->>'prevision_j1')::int AS prevision_j1
+FROM bronze.rte_eco2mix
+  );
+  
+[0m12:06:25.745682 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m12:06:25.747352 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "bronze.rte_eco2mix" does not exist
+LINE 27: FROM bronze.rte_eco2mix
+              ^
+
+[0m12:06:25.770770 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: ROLLBACK
+[0m12:06:25.770038 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m12:06:25.773049 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+alter table "dbelsa"."bronze"."test_connection__dbt_tmp" rename to "test_connection"
+[0m12:06:25.772464 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: Close
+[0m12:06:25.777358 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m12:06:25.779752 [debug] [Thread-1 (]: Database Error in model consumption (models/bronze/consumption.sql)
+  relation "bronze.rte_eco2mix" does not exist
+  LINE 27: FROM bronze.rte_eco2mix
+                ^
+  compiled code at target/run/dbt_elsa/models/bronze/consumption.sql
+[0m12:06:25.804190 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: COMMIT
+[0m12:06:25.806407 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84ba5b7790>]}
+[0m12:06:25.809597 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model bronze.consumption ....................... [[31mERROR[0m in 0.21s]
+[0m12:06:25.811138 [debug] [Thread-1 (]: Finished running node model.dbt_elsa.consumption
+[0m12:06:25.807911 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m12:06:25.812662 [debug] [Thread-7 (]: Marking all children of 'model.dbt_elsa.consumption' to be skipped because of status 'error'.  Reason: Database Error in model consumption (models/bronze/consumption.sql)
+  relation "bronze.rte_eco2mix" does not exist
+  LINE 27: FROM bronze.rte_eco2mix
+                ^
+  compiled code at target/run/dbt_elsa/models/bronze/consumption.sql.
+[0m12:06:25.813620 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: COMMIT
+[0m12:06:25.817701 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m12:06:25.829873 [debug] [Thread-2 (]: Applying DROP to: "dbelsa"."bronze"."test_connection__dbt_backup"
+[0m12:06:25.836679 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m12:06:25.837835 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+drop table if exists "dbelsa"."bronze"."test_connection__dbt_backup" cascade
+[0m12:06:25.839221 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m12:06:25.843168 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: Close
+[0m12:06:25.844855 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '32869aa7-777e-4a77-8e8f-280e704bec9c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bd9d89d0>]}
+[0m12:06:25.846392 [info ] [Thread-2 (]: 2 of 2 OK created sql table model bronze.test_connection ....................... [[32mSELECT 1[0m in 0.25s]
+[0m12:06:25.847758 [debug] [Thread-2 (]: Finished running node model.dbt_elsa.test_connection
+[0m12:06:25.851294 [info ] [MainThread]: 
+[0m12:06:25.852480 [debug] [MainThread]: Using postgres connection "master"
+[0m12:06:25.853230 [debug] [MainThread]: On master: BEGIN
+[0m12:06:25.853916 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:06:25.863507 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m12:06:25.865136 [debug] [MainThread]: On master: COMMIT
+[0m12:06:25.866132 [debug] [MainThread]: Using postgres connection "master"
+[0m12:06:25.866907 [debug] [MainThread]: On master: COMMIT
+[0m12:06:25.867929 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m12:06:25.921129 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m12:06:25.931840 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m12:06:25.970773 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m12:06:25.973588 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m12:06:25.974818 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.11s]
+[0m12:06:25.975927 [debug] [MainThread]: On master: Close
+[0m12:06:25.977309 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:06:25.978240 [debug] [MainThread]: Connection 'model.dbt_elsa.test_connection' was properly closed.
+[0m12:06:25.978974 [debug] [MainThread]: Connection 'model.dbt_elsa.consumption' was properly closed.
+[0m12:06:25.979902 [info ] [MainThread]: 
+[0m12:06:25.980831 [info ] [MainThread]: Finished running 2 project hooks, 2 table models in 0 hours 0 minutes and 0.81 seconds (0.81s).
+[0m12:06:25.983512 [debug] [MainThread]: Command end result
+[0m12:06:26.196938 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m12:06:26.201340 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m12:06:26.212985 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m12:06:26.213857 [info ] [MainThread]: 
+[0m12:06:26.215357 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m12:06:26.216251 [info ] [MainThread]: 
+[0m12:06:26.217117 [error] [MainThread]: [31mFailure in model consumption (models/bronze/consumption.sql)[0m
+[0m12:06:26.218058 [error] [MainThread]:   Database Error in model consumption (models/bronze/consumption.sql)
+  relation "bronze.rte_eco2mix" does not exist
+  LINE 27: FROM bronze.rte_eco2mix
+                ^
+  compiled code at target/run/dbt_elsa/models/bronze/consumption.sql
+[0m12:06:26.218956 [info ] [MainThread]: 
+[0m12:06:26.219862 [info ] [MainThread]:   compiled code at target/compiled/dbt_elsa/models/bronze/consumption.sql
+[0m12:06:26.220650 [info ] [MainThread]: 
+[0m12:06:26.221455 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m12:06:26.223188 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.3141594, "process_in_blocks": "16", "process_kernel_time": 0.480208, "process_mem_max_rss": "131776", "process_out_blocks": "9814", "process_user_time": 4.856492}
+[0m12:06:26.224594 [debug] [MainThread]: Command `dbt run` failed at 12:06:26.224408 after 3.32 seconds
+[0m12:06:26.225575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bc4be560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bace88b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84bc13a2f0>]}
+[0m12:06:26.226607 [debug] [MainThread]: Flushing usage events
+[0m12:06:26.759991 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:44.403454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bccb28d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bcb5d0250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bcb5d01f0>]}
+
+
+============================== 18:19:44.411470 | c21111e0-e67a-422a-a0f6-f31a5e147906 ==============================
+[0m18:19:44.411470 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:19:44.413058 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt_elsa', 'debug': 'False', 'version_check': 'True', 'log_path': '/opt/airflow/dbt_elsa/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select bronze', 'send_anonymous_usage_stats': 'True'}
+[0m18:19:44.691408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bcc9c3a60>]}
+[0m18:19:44.779740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bcb7615d0>]}
+[0m18:19:44.781444 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:19:44.960350 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m18:19:45.883820 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:19:45.884744 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:19:45.897181 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m18:19:46.002712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bc9f44130>]}
+[0m18:19:46.342827 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:19:46.347495 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:19:46.376693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bc9fd73d0>]}
+[0m18:19:46.377878 [info ] [MainThread]: Found 33 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m18:19:46.378983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bc9fd74c0>]}
+[0m18:19:46.382452 [info ] [MainThread]: 
+[0m18:19:46.383542 [info ] [MainThread]: Concurrency: 4 threads (target='dev_elsa')
+[0m18:19:46.384499 [info ] [MainThread]: 
+[0m18:19:46.387029 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:19:46.398304 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa'
+[0m18:19:46.456122 [debug] [ThreadPool]: Using postgres connection "list_dbelsa"
+[0m18:19:46.457263 [debug] [ThreadPool]: On list_dbelsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:19:46.458157 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:19:46.469399 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.011 seconds
+[0m18:19:46.471654 [debug] [ThreadPool]: On list_dbelsa: Close
+[0m18:19:46.477036 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbelsa, now list_dbelsa_bronze)
+[0m18:19:46.478427 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_tec_elsa'
+[0m18:19:46.490185 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:19:46.497211 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:19:46.498239 [debug] [ThreadPool]: On list_dbelsa_bronze: BEGIN
+[0m18:19:46.499220 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: BEGIN
+[0m18:19:46.500180 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:19:46.501116 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:19:46.511156 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m18:19:46.511860 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m18:19:46.512906 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:19:46.514141 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:19:46.515158 [debug] [ThreadPool]: On list_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_bronze"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m18:19:46.516220 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_tec_elsa"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m18:19:46.520274 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.003 seconds
+[0m18:19:46.520865 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m18:19:46.522859 [debug] [ThreadPool]: On list_dbelsa_bronze: ROLLBACK
+[0m18:19:46.524758 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: ROLLBACK
+[0m18:19:46.526129 [debug] [ThreadPool]: On list_dbelsa_bronze: Close
+[0m18:19:46.526908 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: Close
+[0m18:19:46.613230 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:46.614600 [debug] [MainThread]: On master: BEGIN
+[0m18:19:46.615675 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:19:46.626941 [debug] [MainThread]: SQL status: BEGIN in 0.011 seconds
+[0m18:19:46.628301 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:46.629433 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:19:46.634225 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m18:19:46.636270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bca0c69b0>]}
+[0m18:19:46.637354 [debug] [MainThread]: On master: ROLLBACK
+[0m18:19:46.638557 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:46.639456 [debug] [MainThread]: On master: BEGIN
+[0m18:19:46.641005 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:19:46.641839 [debug] [MainThread]: On master: COMMIT
+[0m18:19:46.642610 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:46.643266 [debug] [MainThread]: On master: COMMIT
+[0m18:19:46.644153 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:19:46.702723 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m18:19:46.710951 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m18:19:46.719618 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m18:19:46.721341 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.08s]
+[0m18:19:46.722570 [info ] [MainThread]: 
+[0m18:19:46.723916 [debug] [MainThread]: On master: Close
+[0m18:19:46.735763 [debug] [Thread-1 (]: Began running node model.dbt_elsa.consumption
+[0m18:19:46.736674 [debug] [Thread-2 (]: Began running node model.dbt_elsa.test_connection
+[0m18:19:46.737801 [info ] [Thread-1 (]: 1 of 2 START sql table model bronze.consumption ................................ [RUN]
+[0m18:19:46.739083 [info ] [Thread-2 (]: 2 of 2 START sql table model bronze.test_connection ............................ [RUN]
+[0m18:19:46.740579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbelsa_bronze, now model.dbt_elsa.consumption)
+[0m18:19:46.741947 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_dbelsa_tec_elsa, now model.dbt_elsa.test_connection)
+[0m18:19:46.743394 [debug] [Thread-1 (]: Began compiling node model.dbt_elsa.consumption
+[0m18:19:46.744792 [debug] [Thread-2 (]: Began compiling node model.dbt_elsa.test_connection
+[0m18:19:46.752039 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_elsa.consumption"
+[0m18:19:46.758833 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_elsa.test_connection"
+[0m18:19:46.762936 [debug] [Thread-2 (]: Began executing node model.dbt_elsa.test_connection
+[0m18:19:46.763941 [debug] [Thread-1 (]: Began executing node model.dbt_elsa.consumption
+[0m18:19:46.866132 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_elsa.test_connection"
+[0m18:19:46.868787 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_elsa.consumption"
+[0m18:19:46.872968 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:19:46.874639 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: BEGIN
+[0m18:19:46.875442 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:19:46.873998 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:46.877024 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: BEGIN
+[0m18:19:46.878233 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:19:46.885958 [debug] [Thread-2 (]: SQL status: BEGIN in 0.010 seconds
+[0m18:19:46.887458 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:19:46.888508 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."test_connection__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select current_database() as db, current_schema() as schema
+  );
+  
+[0m18:19:46.889451 [debug] [Thread-1 (]: SQL status: BEGIN in 0.011 seconds
+[0m18:19:46.890280 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:46.891305 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."consumption__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    id,
+    created_at,
+    (data->>'date')::date AS date,
+    (data->>'heure')::time AS heure,   
+    (data->>'gaz')::int AS gaz,
+    (data->>'nucleaire')::int AS nucleaire,
+    (data->>'charbon')::int AS charbon,
+    (data->>'solaire')::int AS solaire,
+    (data->>'eolien')::int AS eolien,
+    (data->>'hydraulique')::int AS hydraulique,
+    (data->>'bioenergies')::int AS bioenergies,
+    (data->>'autres')::int AS autres,
+    (data->>'prevision_j')::int AS prevision_j,
+    (data->>'prevision_j1')::int AS prevision_j1
+FROM bronze.rte_eco2mix
+  );
+  
+[0m18:19:46.891983 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m18:19:46.903581 [debug] [Thread-1 (]: SQL status: SELECT 96 in 0.011 seconds
+[0m18:19:46.910863 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:19:46.918589 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:46.920737 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+alter table "dbelsa"."bronze"."consumption__dbt_tmp" rename to "consumption"
+[0m18:19:46.919701 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+alter table "dbelsa"."bronze"."test_connection" rename to "test_connection__dbt_backup"
+[0m18:19:46.922379 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:19:46.922957 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:19:46.953597 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:19:46.963969 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+alter table "dbelsa"."bronze"."test_connection__dbt_tmp" rename to "test_connection"
+[0m18:19:46.962861 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:46.965529 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+    
+  
+  comment on table "dbelsa"."bronze"."consumption" is $dbt_comment_literal_block$The aim of this table is to track houtly energy consumption for a given day
+$dbt_comment_literal_block$;
+
+  
+[0m18:19:46.966244 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:19:46.971525 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: COMMIT
+[0m18:19:46.973151 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:19:46.974064 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: COMMIT
+[0m18:19:46.972280 [debug] [Thread-1 (]: SQL status: COMMENT in 0.005 seconds
+[0m18:19:46.981760 [debug] [Thread-2 (]: SQL status: COMMIT in 0.007 seconds
+[0m18:19:47.011995 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:47.020498 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbelsa".INFORMATION_SCHEMA.columns
+      where table_name = 'consumption'
+        
+        and table_schema = 'bronze'
+        
+      order by ordinal_position
+
+  
+[0m18:19:47.019358 [debug] [Thread-2 (]: Applying DROP to: "dbelsa"."bronze"."test_connection__dbt_backup"
+[0m18:19:47.028384 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:19:47.029674 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+drop table if exists "dbelsa"."bronze"."test_connection__dbt_backup" cascade
+[0m18:19:47.031730 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.010 seconds
+[0m18:19:47.032854 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m18:19:47.038619 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:47.042438 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: Close
+[0m18:19:47.043753 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+    
+  
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".id is $dbt_comment_literal_block$ID$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".created_at is $dbt_comment_literal_block$datetime$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".date is $dbt_comment_literal_block$date$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".gaz is $dbt_comment_literal_block$Production for gaz energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".nucleaire is $dbt_comment_literal_block$Production for nuclear energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".charbon is $dbt_comment_literal_block$Production for coal energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".solaire is $dbt_comment_literal_block$Production for solar energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".eolien is $dbt_comment_literal_block$Production for eolian energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".hydraulique is $dbt_comment_literal_block$Production for hydrolic energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".bioenergies is $dbt_comment_literal_block$Production for bioenergy energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".autres is $dbt_comment_literal_block$Production for other energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".prevision_j is $dbt_comment_literal_block$Pprevision_j$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".prevision_j1 is $dbt_comment_literal_block$prevision_j1$dbt_comment_literal_block$;
+  
+
+  
+[0m18:19:47.047294 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bc99d7100>]}
+[0m18:19:47.049322 [info ] [Thread-2 (]: 2 of 2 OK created sql table model bronze.test_connection ....................... [[32mSELECT 1[0m in 0.30s]
+[0m18:19:47.050083 [debug] [Thread-1 (]: SQL status: COMMENT in 0.002 seconds
+[0m18:19:47.051214 [debug] [Thread-2 (]: Finished running node model.dbt_elsa.test_connection
+[0m18:19:47.053484 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: COMMIT
+[0m18:19:47.054934 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:47.055863 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: COMMIT
+[0m18:19:47.058061 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:19:47.066974 [debug] [Thread-1 (]: Applying DROP to: "dbelsa"."bronze"."consumption__dbt_backup"
+[0m18:19:47.068409 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:19:47.069384 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+drop table if exists "dbelsa"."bronze"."consumption__dbt_backup" cascade
+[0m18:19:47.070779 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m18:19:47.072981 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: Close
+[0m18:19:47.074415 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c21111e0-e67a-422a-a0f6-f31a5e147906', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bc9401540>]}
+[0m18:19:47.075914 [info ] [Thread-1 (]: 1 of 2 OK created sql table model bronze.consumption ........................... [[32mSELECT 96[0m in 0.33s]
+[0m18:19:47.078885 [debug] [Thread-1 (]: Finished running node model.dbt_elsa.consumption
+[0m18:19:47.082389 [info ] [MainThread]: 
+[0m18:19:47.083947 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:47.086508 [debug] [MainThread]: On master: BEGIN
+[0m18:19:47.088246 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:19:47.101051 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m18:19:47.102255 [debug] [MainThread]: On master: COMMIT
+[0m18:19:47.103215 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:47.104198 [debug] [MainThread]: On master: COMMIT
+[0m18:19:47.105318 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:19:47.172076 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m18:19:47.180112 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m18:19:47.215351 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m18:19:47.220050 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m18:19:47.221563 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.12s]
+[0m18:19:47.223043 [debug] [MainThread]: On master: Close
+[0m18:19:47.224578 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:19:47.225497 [debug] [MainThread]: Connection 'model.dbt_elsa.consumption' was properly closed.
+[0m18:19:47.226308 [debug] [MainThread]: Connection 'model.dbt_elsa.test_connection' was properly closed.
+[0m18:19:47.227430 [info ] [MainThread]: 
+[0m18:19:47.230566 [info ] [MainThread]: Finished running 2 project hooks, 2 table models in 0 hours 0 minutes and 0.84 seconds (0.84s).
+[0m18:19:47.233774 [debug] [MainThread]: Command end result
+[0m18:19:47.444259 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:19:47.448338 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:19:47.460599 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m18:19:47.461565 [info ] [MainThread]: 
+[0m18:19:47.462642 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:19:47.463977 [info ] [MainThread]: 
+[0m18:19:47.465317 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m18:19:47.467334 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.1519918, "process_in_blocks": "0", "process_kernel_time": 0.300661, "process_mem_max_rss": "131720", "process_out_blocks": "8275", "process_user_time": 4.549586}
+[0m18:19:47.468992 [debug] [MainThread]: Command `dbt run` succeeded at 18:19:47.468657 after 3.15 seconds
+[0m18:19:47.470799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bccb28d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bcb422fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3bcc9eaf50>]}
+[0m18:19:47.472937 [debug] [MainThread]: Flushing usage events
+[0m18:19:47.975423 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:55.480103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76b644d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76a088280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76a088220>]}
+
+
+============================== 18:19:55.487490 | e828a77c-24b3-4db9-8caa-0d4b436bd45b ==============================
+[0m18:19:55.487490 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:19:55.488949 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt_elsa', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt_elsa/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --select silver', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:19:55.767398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76a08bc40>]}
+[0m18:19:55.855920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76a063a90>]}
+[0m18:19:55.857758 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:19:56.021201 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m18:19:56.838312 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:19:56.839327 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:19:56.851364 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m18:19:56.952554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd768704130>]}
+[0m18:19:57.300356 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:19:57.304179 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:19:57.332642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd768797490>]}
+[0m18:19:57.333845 [info ] [MainThread]: Found 33 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m18:19:57.334993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd768797580>]}
+[0m18:19:57.338312 [info ] [MainThread]: 
+[0m18:19:57.339383 [info ] [MainThread]: Concurrency: 4 threads (target='dev_elsa')
+[0m18:19:57.340445 [info ] [MainThread]: 
+[0m18:19:57.342359 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:19:57.345154 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa'
+[0m18:19:57.398976 [debug] [ThreadPool]: Using postgres connection "list_dbelsa"
+[0m18:19:57.400166 [debug] [ThreadPool]: On list_dbelsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:19:57.401219 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:19:57.412044 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.011 seconds
+[0m18:19:57.414179 [debug] [ThreadPool]: On list_dbelsa: Close
+[0m18:19:57.424097 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbelsa, now list_dbelsa_bronze)
+[0m18:19:57.425364 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_tec_elsa'
+[0m18:19:57.436601 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:19:57.442766 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:19:57.443727 [debug] [ThreadPool]: On list_dbelsa_bronze: BEGIN
+[0m18:19:57.444779 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: BEGIN
+[0m18:19:57.445750 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:19:57.446751 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:19:57.456420 [debug] [ThreadPool]: SQL status: BEGIN in 0.011 seconds
+[0m18:19:57.457105 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m18:19:57.457977 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:19:57.458723 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:19:57.459668 [debug] [ThreadPool]: On list_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_bronze"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m18:19:57.460705 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_tec_elsa"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m18:19:57.464708 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m18:19:57.465407 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.004 seconds
+[0m18:19:57.467416 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: ROLLBACK
+[0m18:19:57.470098 [debug] [ThreadPool]: On list_dbelsa_bronze: ROLLBACK
+[0m18:19:57.471336 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: Close
+[0m18:19:57.472137 [debug] [ThreadPool]: On list_dbelsa_bronze: Close
+[0m18:19:57.551384 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:57.552749 [debug] [MainThread]: On master: BEGIN
+[0m18:19:57.553975 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:19:57.566607 [debug] [MainThread]: SQL status: BEGIN in 0.013 seconds
+[0m18:19:57.568053 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:57.569501 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:19:57.575175 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m18:19:57.577913 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd768796380>]}
+[0m18:19:57.579345 [debug] [MainThread]: On master: ROLLBACK
+[0m18:19:57.580703 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:57.581796 [debug] [MainThread]: On master: BEGIN
+[0m18:19:57.583577 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:19:57.584818 [debug] [MainThread]: On master: COMMIT
+[0m18:19:57.585765 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:57.586814 [debug] [MainThread]: On master: COMMIT
+[0m18:19:57.588374 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:19:57.643871 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m18:19:57.672877 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m18:19:57.680978 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m18:19:57.682650 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.09s]
+[0m18:19:57.683956 [info ] [MainThread]: 
+[0m18:19:57.685326 [debug] [MainThread]: On master: Close
+[0m18:19:57.696442 [debug] [Thread-1 (]: Began running node model.dbt_elsa.consumption_history
+[0m18:19:57.697797 [info ] [Thread-1 (]: 1 of 1 START sql table model bronze.consumption_history ........................ [RUN]
+[0m18:19:57.699048 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbelsa_bronze, now model.dbt_elsa.consumption_history)
+[0m18:19:57.700088 [debug] [Thread-1 (]: Began compiling node model.dbt_elsa.consumption_history
+[0m18:19:57.714131 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_elsa.consumption_history"
+[0m18:19:57.717650 [debug] [Thread-1 (]: Began executing node model.dbt_elsa.consumption_history
+[0m18:19:57.778354 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_elsa.consumption_history"
+[0m18:19:57.781385 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.782287 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: BEGIN
+[0m18:19:57.783060 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:19:57.792706 [debug] [Thread-1 (]: SQL status: BEGIN in 0.009 seconds
+[0m18:19:57.793945 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.795088 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."consumption_history__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+SELECT *
+FROM "dbelsa"."bronze"."consumption_history"
+WHERE DATE(created_at) < CURRENT_DATE
+UNION
+*/
+SELECT 
+    date,
+    created_at,
+    unpivot.filiere,
+    SUM(unpivot.volume) AS volume
+FROM bronze.consumption
+JOIN LATERAL(VALUES
+    ('gaz', consumption.gaz),
+    ('nucleaire', consumption.nucleaire),
+    ('charbon', consumption.charbon),
+    ('solaire', consumption.solaire),
+    ('eolien', consumption.eolien),
+    ('hydraulique', consumption.hydraulique),
+    ('bioenergies', consumption.bioenergies),
+    ('autres', consumption.autres)
+) unpivot(filiere, volume) ON TRUE
+GROUP BY
+    date,
+    created_at,
+    unpivot.filiere
+  );
+  
+[0m18:19:57.800283 [debug] [Thread-1 (]: SQL status: SELECT 16 in 0.004 seconds
+[0m18:19:57.817378 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.818517 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+alter table "dbelsa"."bronze"."consumption_history__dbt_tmp" rename to "consumption_history"
+[0m18:19:57.820085 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:19:57.850528 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.852028 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+    
+  
+  comment on table "dbelsa"."bronze"."consumption_history" is $dbt_comment_literal_block$The aim of this table is to consolidate history data for consumption
+$dbt_comment_literal_block$;
+
+  
+[0m18:19:57.853641 [debug] [Thread-1 (]: SQL status: COMMENT in 0.001 seconds
+[0m18:19:57.885403 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.886666 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbelsa".INFORMATION_SCHEMA.columns
+      where table_name = 'consumption_history'
+        
+        and table_schema = 'bronze'
+        
+      order by ordinal_position
+
+  
+[0m18:19:57.894486 [debug] [Thread-1 (]: SQL status: SELECT 4 in 0.006 seconds
+[0m18:19:57.900662 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.901863 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+    
+  
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".created_at is $dbt_comment_literal_block$datetime$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".date is $dbt_comment_literal_block$date$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".filiere is $dbt_comment_literal_block$filiere$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".volume is $dbt_comment_literal_block$volume$dbt_comment_literal_block$;
+  
+
+  
+[0m18:19:57.903660 [debug] [Thread-1 (]: SQL status: COMMENT in 0.001 seconds
+[0m18:19:57.905709 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: COMMIT
+[0m18:19:57.906686 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.907717 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: COMMIT
+[0m18:19:57.910022 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:19:57.922368 [debug] [Thread-1 (]: Applying DROP to: "dbelsa"."bronze"."consumption_history__dbt_backup"
+[0m18:19:57.929078 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:19:57.930242 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+drop table if exists "dbelsa"."bronze"."consumption_history__dbt_backup" cascade
+[0m18:19:57.931660 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m18:19:57.935557 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: Close
+[0m18:19:57.938513 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e828a77c-24b3-4db9-8caa-0d4b436bd45b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76812d600>]}
+[0m18:19:57.940328 [info ] [Thread-1 (]: 1 of 1 OK created sql table model bronze.consumption_history ................... [[32mSELECT 16[0m in 0.24s]
+[0m18:19:57.941719 [debug] [Thread-1 (]: Finished running node model.dbt_elsa.consumption_history
+[0m18:19:57.944966 [info ] [MainThread]: 
+[0m18:19:57.946130 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:57.947081 [debug] [MainThread]: On master: BEGIN
+[0m18:19:57.947814 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:19:57.958082 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m18:19:57.959087 [debug] [MainThread]: On master: COMMIT
+[0m18:19:57.959925 [debug] [MainThread]: Using postgres connection "master"
+[0m18:19:57.961001 [debug] [MainThread]: On master: COMMIT
+[0m18:19:57.962696 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:19:58.013864 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m18:19:58.021887 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m18:19:58.056830 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m18:19:58.060665 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m18:19:58.062373 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.10s]
+[0m18:19:58.063802 [debug] [MainThread]: On master: Close
+[0m18:19:58.065253 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:19:58.066081 [debug] [MainThread]: Connection 'model.dbt_elsa.consumption_history' was properly closed.
+[0m18:19:58.066838 [debug] [MainThread]: Connection 'list_dbelsa_tec_elsa' was properly closed.
+[0m18:19:58.068459 [info ] [MainThread]: 
+[0m18:19:58.071017 [info ] [MainThread]: Finished running 2 project hooks, 1 table model in 0 hours 0 minutes and 0.73 seconds (0.73s).
+[0m18:19:58.074445 [debug] [MainThread]: Command end result
+[0m18:19:58.280134 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:19:58.283981 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:19:58.294520 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m18:19:58.295481 [info ] [MainThread]: 
+[0m18:19:58.296402 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:19:58.297548 [info ] [MainThread]: 
+[0m18:19:58.298751 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m18:19:58.300676 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.9053426, "process_in_blocks": "0", "process_kernel_time": 0.255051, "process_mem_max_rss": "129956", "process_out_blocks": "8264", "process_user_time": 4.420541}
+[0m18:19:58.301769 [debug] [MainThread]: Command `dbt run` succeeded at 18:19:58.301639 after 2.91 seconds
+[0m18:19:58.302882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76b644d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd76a08bc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd767f4bac0>]}
+[0m18:19:58.304135 [debug] [MainThread]: Flushing usage events
+[0m18:19:58.756114 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:20:17.696352 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485b513c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4859be4280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4859be4220>]}
+
+
+============================== 18:20:17.702769 | 2889a660-395b-4e33-9c98-b777278e0fb7 ==============================
+[0m18:20:17.702769 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:20:17.703888 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt_elsa', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt_elsa/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select bronze', 'send_anonymous_usage_stats': 'True'}
+[0m18:20:17.993710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485c9a33d0>]}
+[0m18:20:18.087106 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4859ec66e0>]}
+[0m18:20:18.088881 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:20:18.249364 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m18:20:19.082951 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:20:19.084065 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:20:19.097224 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m18:20:19.199724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4858350130>]}
+[0m18:20:19.543138 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:20:19.547581 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:20:19.605860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f48583b8460>]}
+[0m18:20:19.607155 [info ] [MainThread]: Found 33 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m18:20:19.608175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485937b160>]}
+[0m18:20:19.612383 [info ] [MainThread]: 
+[0m18:20:19.613406 [info ] [MainThread]: Concurrency: 4 threads (target='dev_elsa')
+[0m18:20:19.614226 [info ] [MainThread]: 
+[0m18:20:19.615270 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:20:19.621506 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa'
+[0m18:20:19.677193 [debug] [ThreadPool]: Using postgres connection "list_dbelsa"
+[0m18:20:19.679095 [debug] [ThreadPool]: On list_dbelsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:20:19.680085 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:19.692163 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.012 seconds
+[0m18:20:19.695011 [debug] [ThreadPool]: On list_dbelsa: Close
+[0m18:20:19.702917 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbelsa, now list_dbelsa_tec_elsa)
+[0m18:20:19.704754 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_bronze'
+[0m18:20:19.717923 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:20:19.725060 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:20:19.726190 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: BEGIN
+[0m18:20:19.727242 [debug] [ThreadPool]: On list_dbelsa_bronze: BEGIN
+[0m18:20:19.728708 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:20:19.729573 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:19.739126 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m18:20:19.739881 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m18:20:19.740829 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:20:19.744965 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:20:19.746736 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_tec_elsa"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m18:20:19.747978 [debug] [ThreadPool]: On list_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_bronze"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m18:20:19.752066 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m18:20:19.752777 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.003 seconds
+[0m18:20:19.754868 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: ROLLBACK
+[0m18:20:19.757484 [debug] [ThreadPool]: On list_dbelsa_bronze: ROLLBACK
+[0m18:20:19.759218 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: Close
+[0m18:20:19.760424 [debug] [ThreadPool]: On list_dbelsa_bronze: Close
+[0m18:20:19.849793 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:19.851123 [debug] [MainThread]: On master: BEGIN
+[0m18:20:19.852374 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:20:19.864851 [debug] [MainThread]: SQL status: BEGIN in 0.012 seconds
+[0m18:20:19.866169 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:19.867676 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:20:19.872610 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m18:20:19.875209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485837e140>]}
+[0m18:20:19.876734 [debug] [MainThread]: On master: ROLLBACK
+[0m18:20:19.878667 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:19.880223 [debug] [MainThread]: On master: BEGIN
+[0m18:20:19.883015 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:20:19.884161 [debug] [MainThread]: On master: COMMIT
+[0m18:20:19.885072 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:19.885941 [debug] [MainThread]: On master: COMMIT
+[0m18:20:19.887106 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:19.947732 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m18:20:19.956029 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m18:20:19.962915 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m18:20:19.964244 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.08s]
+[0m18:20:19.965194 [info ] [MainThread]: 
+[0m18:20:19.966140 [debug] [MainThread]: On master: Close
+[0m18:20:19.973550 [debug] [Thread-1 (]: Began running node model.dbt_elsa.consumption
+[0m18:20:19.974461 [debug] [Thread-2 (]: Began running node model.dbt_elsa.test_connection
+[0m18:20:19.975825 [info ] [Thread-1 (]: 1 of 2 START sql table model bronze.consumption ................................ [RUN]
+[0m18:20:19.977897 [info ] [Thread-2 (]: 2 of 2 START sql table model bronze.test_connection ............................ [RUN]
+[0m18:20:19.979408 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbelsa_tec_elsa, now model.dbt_elsa.consumption)
+[0m18:20:19.980473 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_dbelsa_bronze, now model.dbt_elsa.test_connection)
+[0m18:20:19.981469 [debug] [Thread-1 (]: Began compiling node model.dbt_elsa.consumption
+[0m18:20:19.982491 [debug] [Thread-2 (]: Began compiling node model.dbt_elsa.test_connection
+[0m18:20:19.989093 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_elsa.consumption"
+[0m18:20:19.996805 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_elsa.test_connection"
+[0m18:20:19.999900 [debug] [Thread-1 (]: Began executing node model.dbt_elsa.consumption
+[0m18:20:20.000964 [debug] [Thread-2 (]: Began executing node model.dbt_elsa.test_connection
+[0m18:20:20.099539 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_elsa.test_connection"
+[0m18:20:20.101946 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_elsa.consumption"
+[0m18:20:20.104658 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:20:20.105661 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: BEGIN
+[0m18:20:20.106303 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.107205 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:20:20.108675 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: BEGIN
+[0m18:20:20.111489 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:20.119799 [debug] [Thread-2 (]: SQL status: BEGIN in 0.013 seconds
+[0m18:20:20.120981 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:20:20.122125 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."test_connection__dbt_tmp"
+  
+  
+    as
+  
+  (
+    select current_database() as db, current_schema() as schema
+  );
+  
+[0m18:20:20.122905 [debug] [Thread-1 (]: SQL status: BEGIN in 0.012 seconds
+[0m18:20:20.124604 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.125801 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:20:20.126605 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."consumption__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT
+    id,
+    created_at,
+    (data->>'date')::date AS date,
+    (data->>'heure')::time AS heure,   
+    (data->>'gaz')::int AS gaz,
+    (data->>'nucleaire')::int AS nucleaire,
+    (data->>'charbon')::int AS charbon,
+    (data->>'solaire')::int AS solaire,
+    (data->>'eolien')::int AS eolien,
+    (data->>'hydraulique')::int AS hydraulique,
+    (data->>'bioenergies')::int AS bioenergies,
+    (data->>'autres')::int AS autres,
+    (data->>'prevision_j')::int AS prevision_j,
+    (data->>'prevision_j1')::int AS prevision_j1
+FROM bronze.rte_eco2mix
+  );
+  
+[0m18:20:20.145737 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:20:20.147090 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+alter table "dbelsa"."bronze"."test_connection" rename to "test_connection__dbt_backup"
+[0m18:20:20.148685 [debug] [Thread-1 (]: SQL status: SELECT 96 in 0.002 seconds
+[0m18:20:20.149456 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:20.157352 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.168014 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+alter table "dbelsa"."bronze"."consumption" rename to "consumption__dbt_backup"
+[0m18:20:20.166970 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:20:20.169754 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+alter table "dbelsa"."bronze"."test_connection__dbt_tmp" rename to "test_connection"
+[0m18:20:20.170461 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:20.172063 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:20.183124 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.220914 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+alter table "dbelsa"."bronze"."consumption__dbt_tmp" rename to "consumption"
+[0m18:20:20.228988 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: COMMIT
+[0m18:20:20.230965 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:20:20.231944 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: COMMIT
+[0m18:20:20.230321 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m18:20:20.240823 [debug] [Thread-2 (]: SQL status: COMMIT in 0.008 seconds
+[0m18:20:20.248172 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.265168 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+    
+  
+  comment on table "dbelsa"."bronze"."consumption" is $dbt_comment_literal_block$The aim of this table is to track houtly energy consumption for a given day
+$dbt_comment_literal_block$;
+
+  
+[0m18:20:20.264054 [debug] [Thread-2 (]: Applying DROP to: "dbelsa"."bronze"."test_connection__dbt_backup"
+[0m18:20:20.266993 [debug] [Thread-1 (]: SQL status: COMMENT in 0.001 seconds
+[0m18:20:20.273817 [debug] [Thread-2 (]: Using postgres connection "model.dbt_elsa.test_connection"
+[0m18:20:20.298169 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.test_connection"} */
+drop table if exists "dbelsa"."bronze"."test_connection__dbt_backup" cascade
+[0m18:20:20.308230 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.006 seconds
+[0m18:20:20.315562 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.319058 [debug] [Thread-2 (]: On model.dbt_elsa.test_connection: Close
+[0m18:20:20.320201 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbelsa".INFORMATION_SCHEMA.columns
+      where table_name = 'consumption'
+        
+        and table_schema = 'bronze'
+        
+      order by ordinal_position
+
+  
+[0m18:20:20.323026 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4857d9f9d0>]}
+[0m18:20:20.325127 [info ] [Thread-2 (]: 2 of 2 OK created sql table model bronze.test_connection ....................... [[32mSELECT 1[0m in 0.34s]
+[0m18:20:20.326709 [debug] [Thread-2 (]: Finished running node model.dbt_elsa.test_connection
+[0m18:20:20.332093 [debug] [Thread-1 (]: SQL status: SELECT 14 in 0.008 seconds
+[0m18:20:20.338751 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.340049 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+
+    
+  
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".id is $dbt_comment_literal_block$ID$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".created_at is $dbt_comment_literal_block$datetime$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".date is $dbt_comment_literal_block$date$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".gaz is $dbt_comment_literal_block$Production for gaz energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".nucleaire is $dbt_comment_literal_block$Production for nuclear energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".charbon is $dbt_comment_literal_block$Production for coal energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".solaire is $dbt_comment_literal_block$Production for solar energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".eolien is $dbt_comment_literal_block$Production for eolian energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".hydraulique is $dbt_comment_literal_block$Production for hydrolic energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".bioenergies is $dbt_comment_literal_block$Production for bioenergy energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".autres is $dbt_comment_literal_block$Production for other energy in TWH$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".prevision_j is $dbt_comment_literal_block$Pprevision_j$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption".prevision_j1 is $dbt_comment_literal_block$prevision_j1$dbt_comment_literal_block$;
+  
+
+  
+[0m18:20:20.342272 [debug] [Thread-1 (]: SQL status: COMMENT in 0.001 seconds
+[0m18:20:20.344804 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: COMMIT
+[0m18:20:20.345946 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.347007 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: COMMIT
+[0m18:20:20.349941 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:20.358658 [debug] [Thread-1 (]: Applying DROP to: "dbelsa"."bronze"."consumption__dbt_backup"
+[0m18:20:20.360072 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption"
+[0m18:20:20.361461 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption"} */
+drop table if exists "dbelsa"."bronze"."consumption__dbt_backup" cascade
+[0m18:20:20.364029 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m18:20:20.366316 [debug] [Thread-1 (]: On model.dbt_elsa.consumption: Close
+[0m18:20:20.367603 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2889a660-395b-4e33-9c98-b777278e0fb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4857ccaf50>]}
+[0m18:20:20.368813 [info ] [Thread-1 (]: 1 of 2 OK created sql table model bronze.consumption ........................... [[32mSELECT 96[0m in 0.39s]
+[0m18:20:20.370056 [debug] [Thread-1 (]: Finished running node model.dbt_elsa.consumption
+[0m18:20:20.372972 [info ] [MainThread]: 
+[0m18:20:20.374056 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:20.374905 [debug] [MainThread]: On master: BEGIN
+[0m18:20:20.375752 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:20:20.385040 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m18:20:20.386053 [debug] [MainThread]: On master: COMMIT
+[0m18:20:20.386906 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:20.387773 [debug] [MainThread]: On master: COMMIT
+[0m18:20:20.388783 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:20.440130 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m18:20:20.448853 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m18:20:20.485478 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m18:20:20.488218 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m18:20:20.489501 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.10s]
+[0m18:20:20.490484 [debug] [MainThread]: On master: Close
+[0m18:20:20.491706 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:20:20.492633 [debug] [MainThread]: Connection 'model.dbt_elsa.consumption' was properly closed.
+[0m18:20:20.493393 [debug] [MainThread]: Connection 'model.dbt_elsa.test_connection' was properly closed.
+[0m18:20:20.494778 [info ] [MainThread]: 
+[0m18:20:20.495648 [info ] [MainThread]: Finished running 2 project hooks, 2 table models in 0 hours 0 minutes and 0.88 seconds (0.88s).
+[0m18:20:20.497844 [debug] [MainThread]: Command end result
+[0m18:20:20.709010 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:20:20.713156 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:20:20.723814 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m18:20:20.724743 [info ] [MainThread]: 
+[0m18:20:20.725773 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:20:20.726640 [info ] [MainThread]: 
+[0m18:20:20.727909 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m18:20:20.729795 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.1289546, "process_in_blocks": "0", "process_kernel_time": 0.385802, "process_mem_max_rss": "131608", "process_out_blocks": "9821", "process_user_time": 4.782084}
+[0m18:20:20.730820 [debug] [MainThread]: Command `dbt run` succeeded at 18:20:20.730685 after 3.13 seconds
+[0m18:20:20.731728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485b513c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485b06fb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f485b0386d0>]}
+[0m18:20:20.732532 [debug] [MainThread]: Flushing usage events
+[0m18:20:21.180897 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:20:24.085200 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a592cd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a4394250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a43941f0>]}
+
+
+============================== 18:20:24.092741 | 510a11f1-e38c-4de1-9c0d-2bd689920f61 ==============================
+[0m18:20:24.092741 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:20:24.093928 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt_elsa', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt_elsa/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select silver', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:20:24.377269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a6e56bc0>]}
+[0m18:20:24.470990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a43e6e90>]}
+[0m18:20:24.472567 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:20:24.633075 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m18:20:25.414646 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:20:25.415551 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:20:25.427486 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m18:20:25.553090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a2a0c130>]}
+[0m18:20:25.909455 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:20:25.913949 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:20:25.944086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a2a9f370>]}
+[0m18:20:25.945716 [info ] [MainThread]: Found 33 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m18:20:25.946678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a2a9f430>]}
+[0m18:20:25.949999 [info ] [MainThread]: 
+[0m18:20:25.951051 [info ] [MainThread]: Concurrency: 4 threads (target='dev_elsa')
+[0m18:20:25.951855 [info ] [MainThread]: 
+[0m18:20:25.952919 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:20:25.954655 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa'
+[0m18:20:26.007189 [debug] [ThreadPool]: Using postgres connection "list_dbelsa"
+[0m18:20:26.008488 [debug] [ThreadPool]: On list_dbelsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:20:26.009536 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:26.020653 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.011 seconds
+[0m18:20:26.022780 [debug] [ThreadPool]: On list_dbelsa: Close
+[0m18:20:26.033927 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbelsa, now list_dbelsa_bronze)
+[0m18:20:26.035553 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_tec_elsa'
+[0m18:20:26.048657 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:20:26.054631 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:20:26.055700 [debug] [ThreadPool]: On list_dbelsa_bronze: BEGIN
+[0m18:20:26.056621 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: BEGIN
+[0m18:20:26.057658 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:20:26.058754 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:26.068915 [debug] [ThreadPool]: SQL status: BEGIN in 0.010 seconds
+[0m18:20:26.069605 [debug] [ThreadPool]: SQL status: BEGIN in 0.012 seconds
+[0m18:20:26.070415 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:20:26.071370 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:20:26.072427 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_tec_elsa"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m18:20:26.073548 [debug] [ThreadPool]: On list_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_bronze"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m18:20:26.078792 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.003 seconds
+[0m18:20:26.079494 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.005 seconds
+[0m18:20:26.081539 [debug] [ThreadPool]: On list_dbelsa_bronze: ROLLBACK
+[0m18:20:26.083322 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: ROLLBACK
+[0m18:20:26.084768 [debug] [ThreadPool]: On list_dbelsa_bronze: Close
+[0m18:20:26.085723 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: Close
+[0m18:20:26.174957 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:26.180246 [debug] [MainThread]: On master: BEGIN
+[0m18:20:26.199597 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:20:26.217517 [debug] [MainThread]: SQL status: BEGIN in 0.018 seconds
+[0m18:20:26.218961 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:26.220722 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:20:26.226826 [debug] [MainThread]: SQL status: SELECT 0 in 0.005 seconds
+[0m18:20:26.229566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a433d1e0>]}
+[0m18:20:26.230938 [debug] [MainThread]: On master: ROLLBACK
+[0m18:20:26.232415 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:26.233426 [debug] [MainThread]: On master: BEGIN
+[0m18:20:26.234935 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:20:26.236025 [debug] [MainThread]: On master: COMMIT
+[0m18:20:26.236978 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:26.237728 [debug] [MainThread]: On master: COMMIT
+[0m18:20:26.238750 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:26.296279 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m18:20:26.304364 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m18:20:26.313847 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m18:20:26.315501 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.08s]
+[0m18:20:26.317196 [info ] [MainThread]: 
+[0m18:20:26.319073 [debug] [MainThread]: On master: Close
+[0m18:20:26.332610 [debug] [Thread-1 (]: Began running node model.dbt_elsa.consumption_history
+[0m18:20:26.334142 [info ] [Thread-1 (]: 1 of 1 START sql table model bronze.consumption_history ........................ [RUN]
+[0m18:20:26.335861 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbelsa_tec_elsa, now model.dbt_elsa.consumption_history)
+[0m18:20:26.337200 [debug] [Thread-1 (]: Began compiling node model.dbt_elsa.consumption_history
+[0m18:20:26.346845 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_elsa.consumption_history"
+[0m18:20:26.349550 [debug] [Thread-1 (]: Began executing node model.dbt_elsa.consumption_history
+[0m18:20:26.420892 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_elsa.consumption_history"
+[0m18:20:26.423660 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.424766 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: BEGIN
+[0m18:20:26.425863 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:26.436345 [debug] [Thread-1 (]: SQL status: BEGIN in 0.010 seconds
+[0m18:20:26.437395 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.438360 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+  
+    
+
+  create  table "dbelsa"."bronze"."consumption_history__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+SELECT *
+FROM "dbelsa"."bronze"."consumption_history"
+WHERE DATE(created_at) < CURRENT_DATE
+UNION
+*/
+SELECT 
+    date,
+    created_at,
+    unpivot.filiere,
+    SUM(unpivot.volume) AS volume
+FROM bronze.consumption
+JOIN LATERAL(VALUES
+    ('gaz', consumption.gaz),
+    ('nucleaire', consumption.nucleaire),
+    ('charbon', consumption.charbon),
+    ('solaire', consumption.solaire),
+    ('eolien', consumption.eolien),
+    ('hydraulique', consumption.hydraulique),
+    ('bioenergies', consumption.bioenergies),
+    ('autres', consumption.autres)
+) unpivot(filiere, volume) ON TRUE
+GROUP BY
+    date,
+    created_at,
+    unpivot.filiere
+  );
+  
+[0m18:20:26.443192 [debug] [Thread-1 (]: SQL status: SELECT 16 in 0.004 seconds
+[0m18:20:26.460928 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.462597 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+alter table "dbelsa"."bronze"."consumption_history" rename to "consumption_history__dbt_backup"
+[0m18:20:26.464488 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:26.472378 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.473561 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+alter table "dbelsa"."bronze"."consumption_history__dbt_tmp" rename to "consumption_history"
+[0m18:20:26.475351 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:20:26.510107 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.511846 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+    
+  
+  comment on table "dbelsa"."bronze"."consumption_history" is $dbt_comment_literal_block$The aim of this table is to consolidate history data for consumption
+$dbt_comment_literal_block$;
+
+  
+[0m18:20:26.513480 [debug] [Thread-1 (]: SQL status: COMMENT in 0.001 seconds
+[0m18:20:26.546003 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.547473 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "dbelsa".INFORMATION_SCHEMA.columns
+      where table_name = 'consumption_history'
+        
+        and table_schema = 'bronze'
+        
+      order by ordinal_position
+
+  
+[0m18:20:26.555057 [debug] [Thread-1 (]: SQL status: SELECT 4 in 0.006 seconds
+[0m18:20:26.561311 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.562622 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+
+    
+  
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".created_at is $dbt_comment_literal_block$datetime$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".date is $dbt_comment_literal_block$date$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".filiere is $dbt_comment_literal_block$filiere$dbt_comment_literal_block$;
+  
+    
+    
+    comment on column "dbelsa"."bronze"."consumption_history".volume is $dbt_comment_literal_block$volume$dbt_comment_literal_block$;
+  
+
+  
+[0m18:20:26.564100 [debug] [Thread-1 (]: SQL status: COMMENT in 0.000 seconds
+[0m18:20:26.566147 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: COMMIT
+[0m18:20:26.567171 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.568128 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: COMMIT
+[0m18:20:26.570288 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:20:26.582734 [debug] [Thread-1 (]: Applying DROP to: "dbelsa"."bronze"."consumption_history__dbt_backup"
+[0m18:20:26.589952 [debug] [Thread-1 (]: Using postgres connection "model.dbt_elsa.consumption_history"
+[0m18:20:26.591256 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "model.dbt_elsa.consumption_history"} */
+drop table if exists "dbelsa"."bronze"."consumption_history__dbt_backup" cascade
+[0m18:20:26.594791 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m18:20:26.598872 [debug] [Thread-1 (]: On model.dbt_elsa.consumption_history: Close
+[0m18:20:26.601738 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '510a11f1-e38c-4de1-9c0d-2bd689920f61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a246ee30>]}
+[0m18:20:26.603230 [info ] [Thread-1 (]: 1 of 1 OK created sql table model bronze.consumption_history ................... [[32mSELECT 16[0m in 0.26s]
+[0m18:20:26.604645 [debug] [Thread-1 (]: Finished running node model.dbt_elsa.consumption_history
+[0m18:20:26.607646 [info ] [MainThread]: 
+[0m18:20:26.608951 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:26.609886 [debug] [MainThread]: On master: BEGIN
+[0m18:20:26.611337 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:20:26.620649 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m18:20:26.621701 [debug] [MainThread]: On master: COMMIT
+[0m18:20:26.622594 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:26.623431 [debug] [MainThread]: On master: COMMIT
+[0m18:20:26.624482 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:26.680600 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m18:20:26.688346 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m18:20:26.726019 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m18:20:26.729536 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m18:20:26.730788 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.11s]
+[0m18:20:26.731729 [debug] [MainThread]: On master: Close
+[0m18:20:26.732882 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:20:26.733696 [debug] [MainThread]: Connection 'list_dbelsa_bronze' was properly closed.
+[0m18:20:26.734505 [debug] [MainThread]: Connection 'model.dbt_elsa.consumption_history' was properly closed.
+[0m18:20:26.735430 [info ] [MainThread]: 
+[0m18:20:26.736366 [info ] [MainThread]: Finished running 2 project hooks, 1 table model in 0 hours 0 minutes and 0.78 seconds (0.78s).
+[0m18:20:26.738124 [debug] [MainThread]: Command end result
+[0m18:20:26.950017 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:20:26.953741 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:20:26.965095 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m18:20:26.965986 [info ] [MainThread]: 
+[0m18:20:26.966920 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:20:26.967747 [info ] [MainThread]: 
+[0m18:20:26.968603 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m18:20:26.970177 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.970319, "process_in_blocks": "0", "process_kernel_time": 0.281577, "process_mem_max_rss": "129852", "process_out_blocks": "8265", "process_user_time": 4.640814}
+[0m18:20:26.971259 [debug] [MainThread]: Command `dbt run` succeeded at 18:20:26.971129 after 2.97 seconds
+[0m18:20:26.972115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a592cd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a43e6fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76a57ef370>]}
+[0m18:20:26.972984 [debug] [MainThread]: Flushing usage events
+[0m18:20:27.425730 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:20:31.209875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043be28ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043a8c42e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043a8c4280>]}
+
+
+============================== 18:20:31.216980 | f82c8a81-8f15-4b15-bd82-aff2e7148a2e ==============================
+[0m18:20:31.216980 [info ] [MainThread]: Running with dbt=1.10.4
+[0m18:20:31.218203 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dbt_elsa', 'log_path': '/opt/airflow/dbt_elsa/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m18:20:31.499293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043e3b9fc0>]}
+[0m18:20:31.594761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043aa4fc70>]}
+[0m18:20:31.596312 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:20:31.761714 [debug] [MainThread]: checksum: 073cb5a296270136b24f9c040fdebd0642ef9c263903ef463bfe7e190c538da2, vars: {}, profile: , target: , version: 1.10.4
+[0m18:20:32.560501 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:20:32.561886 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:20:32.573655 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_elsa.gold
+- seeds.dbt_elsa
+[0m18:20:32.675129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0438f34130>]}
+[0m18:20:33.074572 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:20:33.079431 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:20:33.130301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0438d3a7d0>]}
+[0m18:20:33.131772 [info ] [MainThread]: Found 33 models, 2 operations, 5 data tests, 2 sources, 1572 macros
+[0m18:20:33.133189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043a194f10>]}
+[0m18:20:33.137720 [info ] [MainThread]: 
+[0m18:20:33.139001 [info ] [MainThread]: Concurrency: 4 threads (target='dev_elsa')
+[0m18:20:33.140353 [info ] [MainThread]: 
+[0m18:20:33.142159 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:20:33.154351 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_tec_elsa'
+[0m18:20:33.155634 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dbelsa_bronze'
+[0m18:20:33.289953 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:20:33.290995 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:20:33.292445 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: BEGIN
+[0m18:20:33.294288 [debug] [ThreadPool]: On list_dbelsa_bronze: BEGIN
+[0m18:20:33.296786 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:33.295585 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:20:33.311254 [debug] [ThreadPool]: SQL status: BEGIN in 0.014 seconds
+[0m18:20:33.312223 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m18:20:33.313228 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_bronze"
+[0m18:20:33.314481 [debug] [ThreadPool]: Using postgres connection "list_dbelsa_tec_elsa"
+[0m18:20:33.315844 [debug] [ThreadPool]: On list_dbelsa_bronze: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_bronze"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'bronze'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'bronze'
+  
+[0m18:20:33.317353 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "list_dbelsa_tec_elsa"} */
+select
+      'dbelsa' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'tec_elsa'
+    union all
+    select
+      'dbelsa' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'tec_elsa'
+  
+[0m18:20:33.321955 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.003 seconds
+[0m18:20:33.322713 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m18:20:33.329457 [debug] [ThreadPool]: On list_dbelsa_bronze: ROLLBACK
+[0m18:20:33.331754 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: ROLLBACK
+[0m18:20:33.333231 [debug] [ThreadPool]: On list_dbelsa_bronze: Close
+[0m18:20:33.333887 [debug] [ThreadPool]: On list_dbelsa_tec_elsa: Close
+[0m18:20:33.349892 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:33.350980 [debug] [MainThread]: On master: BEGIN
+[0m18:20:33.351885 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:20:33.362442 [debug] [MainThread]: SQL status: BEGIN in 0.010 seconds
+[0m18:20:33.365070 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:33.369224 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:20:33.373870 [debug] [MainThread]: SQL status: SELECT 0 in 0.003 seconds
+[0m18:20:33.376403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043d26b0d0>]}
+[0m18:20:33.378175 [debug] [MainThread]: On master: ROLLBACK
+[0m18:20:33.380186 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:33.382395 [debug] [MainThread]: On master: BEGIN
+[0m18:20:33.383857 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m18:20:33.385134 [debug] [MainThread]: On master: COMMIT
+[0m18:20:33.387386 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:33.388967 [debug] [MainThread]: On master: COMMIT
+[0m18:20:33.391199 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:33.451173 [debug] [MainThread]: Elementary: Materialization override is enabled.
+[0m18:20:33.501209 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:33.502464 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "connection_name": "master"} */
+
+    select count(*) from pg_namespace where nspname = 'tec_elsa__tests'
+  
+[0m18:20:33.505626 [debug] [MainThread]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:20:33.510306 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-start-0"
+[0m18:20:33.517177 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-start.0 ................................... [RUN]
+[0m18:20:33.518627 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-start.0 ...................................... [[32mOK[0m in 0.12s]
+[0m18:20:33.519616 [info ] [MainThread]: 
+[0m18:20:33.520808 [debug] [MainThread]: On master: Close
+[0m18:20:33.529847 [debug] [Thread-1 (]: Began running node test.dbt_elsa.not_null_consumption_created_at.93906ad963
+[0m18:20:33.530790 [debug] [Thread-2 (]: Began running node test.dbt_elsa.not_null_consumption_date.0e210070dc
+[0m18:20:33.531598 [debug] [Thread-3 (]: Began running node test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9
+[0m18:20:33.532438 [debug] [Thread-4 (]: Began running node test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4
+[0m18:20:33.533118 [info ] [Thread-1 (]: 1 of 5 START test not_null_consumption_created_at .............................. [RUN]
+[0m18:20:33.534476 [info ] [Thread-2 (]: 2 of 5 START test not_null_consumption_date .................................... [RUN]
+[0m18:20:33.535500 [info ] [Thread-3 (]: 3 of 5 START test not_null_consumption_history_created_at ...................... [RUN]
+[0m18:20:33.536552 [info ] [Thread-4 (]: 4 of 5 START test not_null_consumption_history_date ............................ [RUN]
+[0m18:20:33.537708 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbelsa_tec_elsa, now test.dbt_elsa.not_null_consumption_created_at.93906ad963)
+[0m18:20:33.538730 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_dbelsa_bronze, now test.dbt_elsa.not_null_consumption_date.0e210070dc)
+[0m18:20:33.539850 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9'
+[0m18:20:33.540984 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4'
+[0m18:20:33.542228 [debug] [Thread-1 (]: Began compiling node test.dbt_elsa.not_null_consumption_created_at.93906ad963
+[0m18:20:33.543347 [debug] [Thread-2 (]: Began compiling node test.dbt_elsa.not_null_consumption_date.0e210070dc
+[0m18:20:33.544832 [debug] [Thread-3 (]: Began compiling node test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9
+[0m18:20:33.545918 [debug] [Thread-4 (]: Began compiling node test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4
+[0m18:20:33.574598 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_elsa.not_null_consumption_created_at.93906ad963"
+[0m18:20:33.579013 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_elsa.not_null_consumption_date.0e210070dc"
+[0m18:20:33.589817 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9"
+[0m18:20:33.602134 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4"
+[0m18:20:33.610043 [debug] [Thread-1 (]: Began executing node test.dbt_elsa.not_null_consumption_created_at.93906ad963
+[0m18:20:33.612187 [debug] [Thread-2 (]: Began executing node test.dbt_elsa.not_null_consumption_date.0e210070dc
+[0m18:20:33.618979 [warn ] [Thread-1 (]: [[33mWARNING[0m]: Installed package 'elementary' is overriding the built-in
+materialization 'test'. Overrides of built-in materializations from installed
+packages will be deprecated in future versions of dbt. For more information:
+https://docs.getdbt.com/reference/global-configs/legacy-behaviors
+[0m18:20:33.627195 [warn ] [Thread-2 (]: [[33mWARNING[0m]: Installed package 'elementary' is overriding the built-in
+materialization 'test'. Overrides of built-in materializations from installed
+packages will be deprecated in future versions of dbt. For more information:
+https://docs.getdbt.com/reference/global-configs/legacy-behaviors
+[0m18:20:33.628852 [debug] [Thread-3 (]: Began executing node test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9
+[0m18:20:33.629662 [debug] [Thread-4 (]: Began executing node test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4
+[0m18:20:33.630475 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043834a4a0>]}
+[0m18:20:33.631456 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f04383af580>]}
+[0m18:20:33.638396 [warn ] [Thread-3 (]: [[33mWARNING[0m]: Installed package 'elementary' is overriding the built-in
+materialization 'test'. Overrides of built-in materializations from installed
+packages will be deprecated in future versions of dbt. For more information:
+https://docs.getdbt.com/reference/global-configs/legacy-behaviors
+[0m18:20:33.645842 [warn ] [Thread-4 (]: [[33mWARNING[0m]: Installed package 'elementary' is overriding the built-in
+materialization 'test'. Overrides of built-in materializations from installed
+packages will be deprecated in future versions of dbt. For more information:
+https://docs.getdbt.com/reference/global-configs/legacy-behaviors
+[0m18:20:33.685651 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f04383ed3c0>]}
+[0m18:20:33.710040 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'f82c8a81-8f15-4b15-bd82-aff2e7148a2e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043822af80>]}
+[0m18:20:34.284635 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4"
+[0m18:20:34.286065 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_elsa.not_null_consumption_date.0e210070dc"
+[0m18:20:34.289055 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_elsa.not_null_consumption_created_at.93906ad963"
+[0m18:20:34.294488 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9"
+[0m18:20:34.299158 [debug] [Thread-4 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4"
+[0m18:20:34.300366 [debug] [Thread-2 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_date.0e210070dc"
+[0m18:20:34.301097 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4: BEGIN
+[0m18:20:34.301922 [debug] [Thread-1 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_created_at.93906ad963"
+[0m18:20:34.302799 [debug] [Thread-3 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9"
+[0m18:20:34.303363 [debug] [Thread-2 (]: On test.dbt_elsa.not_null_consumption_date.0e210070dc: BEGIN
+[0m18:20:34.304470 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:20:34.305447 [debug] [Thread-1 (]: On test.dbt_elsa.not_null_consumption_created_at.93906ad963: BEGIN
+[0m18:20:34.306401 [debug] [Thread-3 (]: On test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9: BEGIN
+[0m18:20:34.307301 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:20:34.311043 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:20:34.313163 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:20:34.322214 [debug] [Thread-4 (]: SQL status: BEGIN in 0.017 seconds
+[0m18:20:34.323959 [debug] [Thread-4 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4"
+[0m18:20:34.325825 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from "dbelsa"."bronze"."consumption_history"
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:34.328834 [debug] [Thread-2 (]: SQL status: BEGIN in 0.021 seconds
+[0m18:20:34.330098 [debug] [Thread-1 (]: SQL status: BEGIN in 0.020 seconds
+[0m18:20:34.334793 [debug] [Thread-1 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_created_at.93906ad963"
+[0m18:20:34.332865 [debug] [Thread-2 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_date.0e210070dc"
+[0m18:20:34.333754 [debug] [Thread-3 (]: SQL status: BEGIN in 0.021 seconds
+[0m18:20:34.331293 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m18:20:34.336251 [debug] [Thread-1 (]: On test.dbt_elsa.not_null_consumption_created_at.93906ad963: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "test.dbt_elsa.not_null_consumption_created_at.93906ad963"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select created_at
+from "dbelsa"."bronze"."consumption"
+where created_at is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:34.338434 [debug] [Thread-2 (]: On test.dbt_elsa.not_null_consumption_date.0e210070dc: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "test.dbt_elsa.not_null_consumption_date.0e210070dc"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from "dbelsa"."bronze"."consumption"
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:34.340731 [debug] [Thread-3 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9"
+[0m18:20:34.375685 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m18:20:34.388911 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m18:20:34.395867 [debug] [Thread-3 (]: On test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select created_at
+from "dbelsa"."bronze"."consumption_history"
+where created_at is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:34.417585 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4: ROLLBACK
+[0m18:20:34.424625 [debug] [Thread-1 (]: On test.dbt_elsa.not_null_consumption_created_at.93906ad963: ROLLBACK
+[0m18:20:34.432749 [debug] [Thread-2 (]: On test.dbt_elsa.not_null_consumption_date.0e210070dc: ROLLBACK
+[0m18:20:34.434735 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4: Close
+[0m18:20:34.435485 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:20:34.436489 [debug] [Thread-1 (]: On test.dbt_elsa.not_null_consumption_created_at.93906ad963: Close
+[0m18:20:34.437425 [debug] [Thread-2 (]: On test.dbt_elsa.not_null_consumption_date.0e210070dc: Close
+[0m18:20:34.438607 [info ] [Thread-4 (]: 4 of 5 PASS not_null_consumption_history_date .................................. [[32mPASS[0m in 0.90s]
+[0m18:20:34.446928 [debug] [Thread-3 (]: On test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9: ROLLBACK
+[0m18:20:34.448374 [info ] [Thread-1 (]: 1 of 5 PASS not_null_consumption_created_at .................................... [[32mPASS[0m in 0.91s]
+[0m18:20:34.451150 [info ] [Thread-2 (]: 2 of 5 PASS not_null_consumption_date .......................................... [[32mPASS[0m in 0.91s]
+[0m18:20:34.452696 [debug] [Thread-4 (]: Finished running node test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4
+[0m18:20:34.454478 [debug] [Thread-1 (]: Finished running node test.dbt_elsa.not_null_consumption_created_at.93906ad963
+[0m18:20:34.455153 [debug] [Thread-3 (]: On test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9: Close
+[0m18:20:34.456498 [debug] [Thread-2 (]: Finished running node test.dbt_elsa.not_null_consumption_date.0e210070dc
+[0m18:20:34.457697 [debug] [Thread-4 (]: Began running node test.dbt_elsa.not_null_consumption_id.186948fd55
+[0m18:20:34.460054 [info ] [Thread-3 (]: 3 of 5 PASS not_null_consumption_history_created_at ............................ [[32mPASS[0m in 0.92s]
+[0m18:20:34.462670 [info ] [Thread-4 (]: 5 of 5 START test not_null_consumption_id ...................................... [RUN]
+[0m18:20:34.463966 [debug] [Thread-3 (]: Finished running node test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9
+[0m18:20:34.465079 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_elsa.not_null_consumption_history_date.b254ef3ed4, now test.dbt_elsa.not_null_consumption_id.186948fd55)
+[0m18:20:34.466574 [debug] [Thread-4 (]: Began compiling node test.dbt_elsa.not_null_consumption_id.186948fd55
+[0m18:20:34.476308 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_elsa.not_null_consumption_id.186948fd55"
+[0m18:20:34.479591 [debug] [Thread-4 (]: Began executing node test.dbt_elsa.not_null_consumption_id.186948fd55
+[0m18:20:34.491791 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_elsa.not_null_consumption_id.186948fd55"
+[0m18:20:34.494774 [debug] [Thread-4 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_id.186948fd55"
+[0m18:20:34.495839 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_id.186948fd55: BEGIN
+[0m18:20:34.496695 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m18:20:34.506334 [debug] [Thread-4 (]: SQL status: BEGIN in 0.009 seconds
+[0m18:20:34.507521 [debug] [Thread-4 (]: Using postgres connection "test.dbt_elsa.not_null_consumption_id.186948fd55"
+[0m18:20:34.508651 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_id.186948fd55: /* {"app": "dbt", "dbt_version": "1.10.4", "profile_name": "dbt_elsa", "target_name": "dev_elsa", "node_id": "test.dbt_elsa.not_null_consumption_id.186948fd55"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "dbelsa"."bronze"."consumption"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:20:34.511140 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m18:20:34.519042 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_id.186948fd55: ROLLBACK
+[0m18:20:34.520597 [debug] [Thread-4 (]: On test.dbt_elsa.not_null_consumption_id.186948fd55: Close
+[0m18:20:34.521892 [info ] [Thread-4 (]: 5 of 5 PASS not_null_consumption_id ............................................ [[32mPASS[0m in 0.06s]
+[0m18:20:34.523673 [debug] [Thread-4 (]: Finished running node test.dbt_elsa.not_null_consumption_id.186948fd55
+[0m18:20:34.527694 [info ] [MainThread]: 
+[0m18:20:34.528831 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:34.529584 [debug] [MainThread]: On master: BEGIN
+[0m18:20:34.530323 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:20:34.539303 [debug] [MainThread]: SQL status: BEGIN in 0.009 seconds
+[0m18:20:34.540846 [debug] [MainThread]: On master: COMMIT
+[0m18:20:34.541972 [debug] [MainThread]: Using postgres connection "master"
+[0m18:20:34.543008 [debug] [MainThread]: On master: COMMIT
+[0m18:20:34.544731 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:20:34.589669 [debug] [MainThread]: Elementary: Uploading dbt artifacts.
+[0m18:20:34.599015 [debug] [MainThread]: Elementary: Uploaded dbt artifacts.
+[0m18:20:34.617634 [debug] [MainThread]: Elementary: Handling test results.
+[0m18:20:34.787387 [warn ] [MainThread]: Missing Elementary models in 'dbelsa.tec_elsa'. Please run 'dbt run -s elementary --target dev_elsa'.
+[0m18:20:34.814358 [debug] [MainThread]: Elementary: Handled test results successfully.
+[0m18:20:34.844489 [debug] [MainThread]: Writing injected SQL for node "operation.elementary.elementary-on-run-end-0"
+[0m18:20:34.847263 [info ] [MainThread]: 1 of 1 START hook: elementary.on-run-end.0 ..................................... [RUN]
+[0m18:20:34.848477 [info ] [MainThread]: 1 of 1 OK hook: elementary.on-run-end.0 ........................................ [[32mOK[0m in 0.30s]
+[0m18:20:34.849410 [debug] [MainThread]: On master: Close
+[0m18:20:34.850478 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:20:34.851304 [debug] [MainThread]: Connection 'test.dbt_elsa.not_null_consumption_created_at.93906ad963' was properly closed.
+[0m18:20:34.852036 [debug] [MainThread]: Connection 'test.dbt_elsa.not_null_consumption_date.0e210070dc' was properly closed.
+[0m18:20:34.852814 [debug] [MainThread]: Connection 'test.dbt_elsa.not_null_consumption_history_created_at.1cd39d44b9' was properly closed.
+[0m18:20:34.853494 [debug] [MainThread]: Connection 'test.dbt_elsa.not_null_consumption_id.186948fd55' was properly closed.
+[0m18:20:34.854354 [info ] [MainThread]: 
+[0m18:20:34.855140 [info ] [MainThread]: Finished running 2 project hooks, 5 data tests in 0 hours 0 minutes and 1.71 seconds (1.71s).
+[0m18:20:34.858615 [debug] [MainThread]: Command end result
+[0m18:20:35.074714 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_elsa/target/manifest.json
+[0m18:20:35.079408 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_elsa/target/semantic_manifest.json
+[0m18:20:35.091815 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_elsa/target/run_results.json
+[0m18:20:35.092871 [info ] [MainThread]: 
+[0m18:20:35.093869 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:20:35.095405 [info ] [MainThread]: 
+[0m18:20:35.096348 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m18:20:35.097512 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PackageMaterializationOverrideDeprecation: 5 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m18:20:35.099214 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 3.974691, "process_in_blocks": "0", "process_kernel_time": 0.3049, "process_mem_max_rss": "136240", "process_out_blocks": "8289", "process_user_time": 5.580514}
+[0m18:20:35.100364 [debug] [MainThread]: Command `dbt test` succeeded at 18:20:35.100175 after 3.98 seconds
+[0m18:20:35.101238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043be28ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043e3b9fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f043bce4400>]}
+[0m18:20:35.102695 [debug] [MainThread]: Flushing usage events
+[0m18:20:35.546473 [debug] [MainThread]: An error was encountered while trying to flush usage events

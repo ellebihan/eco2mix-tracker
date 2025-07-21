@@ -50,6 +50,15 @@ def load_data(config, domain=None):
         except Exception as e:
             print(f"Error loading data from {source_name}: {str(e)}")
 
+# Nouveau wrapper compatible Airflow
+def run_loading_for_airflow(domain='rte', config_path='datasources.yaml'):
+    try:
+        config = load_config(config_path)
+    except Exception as e:
+        print(f"Error loading config file: {str(e)}")
+        raise
+    load_data(config, domain)
+
 def main():
     args = parse_args()
     

@@ -5,7 +5,7 @@
 
 
 select created_at
-from "elsa"."bronze"."consumption"
+from "dbelsa"."bronze"."consumption"
 where created_at is null
 
 

@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import requests
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class SourceExtractor(ABC):
     """Abstract class defining a datasource extractor.
@@ -20,6 +20,13 @@ class MetadonneesApiExtractor(SourceExtractor):
     def download(self, domain, source):
         headers = source.get("headers", {})
         params = source.get("params", {})
+        if "refine" in params and not params["refine"]:
+            date_str = (datetime.now() - timedelta(days=1)).strftime("%Y/%m/%d")
+            params = {
+                "refine": f"date_heure:{date_str}",
+                "limit": 96
+            }
+        print(f"params2 :{params}")
         # response_path dépend de la structure du json
         response_path = source.get("response_path", 0)
 
