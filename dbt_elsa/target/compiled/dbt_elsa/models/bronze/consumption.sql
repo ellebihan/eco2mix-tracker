@@ -13,4 +13,4 @@ SELECT
     (data->>'autres')::int AS autres,
     (data->>'prevision_j')::int AS prevision_j,
     (data->>'prevision_j1')::int AS prevision_j1
-FROM "airflow"."bronze"."rte_eco2mix"
+FROM bronze.rte_eco2mix

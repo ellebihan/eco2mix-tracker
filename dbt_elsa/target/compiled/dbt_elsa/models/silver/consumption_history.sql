@@ -1,13 +1,15 @@
+/*
 SELECT *
-FROM "elsa"."silver"."consumption_history"
+FROM "dbelsa"."bronze"."consumption_history"
 WHERE DATE(created_at) < CURRENT_DATE
 UNION
+*/
 SELECT 
     date,
     created_at,
     unpivot.filiere,
     SUM(unpivot.volume) AS volume
-FROM "elsa"."bronze"."consumption"
+FROM bronze.consumption
 JOIN LATERAL(VALUES
     ('gaz', consumption.gaz),
     ('nucleaire', consumption.nucleaire),

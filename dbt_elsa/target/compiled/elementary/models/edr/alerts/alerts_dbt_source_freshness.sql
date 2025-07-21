@@ -1,11 +1,11 @@
 
 
 with results as (
-  select * from "elsa"."bronze_tec_elsa"."dbt_source_freshness_results"
+  select * from "elsa"."tec_elsa"."dbt_source_freshness_results"
 ),
 
 sources as (
-  select * from "elsa"."bronze_tec_elsa"."dbt_sources"
+  select * from "elsa"."tec_elsa"."dbt_sources"
 )
 
 select

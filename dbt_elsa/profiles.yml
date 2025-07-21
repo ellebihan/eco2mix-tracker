@@ -1,14 +1,23 @@
 dbt_elsa:
-  target: dev_live
+  target: dev_elsa
+
   outputs:
-    dev_live:
+    dev_airflow:
       type: postgres
       threads: 16
       host: db_airflow
-      port: 5432
+      port: 5433
       user: airflow
       password: airflow        
       dbname: airflow
       schema: bronze           # ➜ schema par défaut, tu peux l’écraser dans dbt_project.yml
 
-  
+    dev_elsa:
+      type: postgres
+      host: db         # Le service docker de ta base principale (dbelsa)
+      user: elsalebihan
+      pass: elsa
+      port: 5432
+      dbname: dbelsa
+      schema: bronze
+      threads: 4

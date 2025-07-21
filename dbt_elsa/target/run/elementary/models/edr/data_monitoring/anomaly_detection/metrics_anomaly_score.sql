@@ -1,5 +1,5 @@
 
-  create view "elsa"."bronze_tec_elsa"."metrics_anomaly_score__dbt_tmp"
+  create view "elsa"."tec_elsa"."metrics_anomaly_score__dbt_tmp"
     
     
   as (
@@ -7,7 +7,7 @@
 
 with data_monitoring_metrics as (
 
-    select * from "elsa"."bronze_tec_elsa"."data_monitoring_metrics"
+    select * from "elsa"."tec_elsa"."data_monitoring_metrics"
 
 ),
 

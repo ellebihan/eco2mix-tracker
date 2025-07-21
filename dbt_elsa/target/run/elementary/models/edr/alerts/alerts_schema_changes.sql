@@ -1,5 +1,5 @@
 
-  create view "elsa"."bronze_tec_elsa"."alerts_schema_changes__dbt_tmp"
+  create view "elsa"."tec_elsa"."alerts_schema_changes__dbt_tmp"
     
     
   as (
@@ -7,7 +7,7 @@
 
 
 with elementary_test_results as (
-    select * from "elsa"."bronze_tec_elsa"."elementary_test_results"
+    select * from "elsa"."tec_elsa"."elementary_test_results"
 ),
 
 alerts_schema_changes as (

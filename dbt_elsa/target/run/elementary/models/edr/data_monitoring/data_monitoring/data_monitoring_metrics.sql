@@ -3,7 +3,7 @@
   
     
 
-  create  table "elsa"."bronze_tec_elsa"."data_monitoring_metrics"
+  create  table "elsa"."tec_elsa"."data_monitoring_metrics"
   
   
     as

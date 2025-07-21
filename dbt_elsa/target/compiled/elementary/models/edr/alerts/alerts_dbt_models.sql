@@ -25,7 +25,7 @@ with error_models as (
             original_path,
             owner,
             alias 
-    from "elsa"."bronze_tec_elsa"."model_run_results"
+    from "elsa"."tec_elsa"."model_run_results"
   
     union all
   
@@ -52,7 +52,7 @@ with error_models as (
             original_path,
             owner,
             alias  
-  from "elsa"."bronze_tec_elsa"."snapshot_run_results"
+  from "elsa"."tec_elsa"."snapshot_run_results"
 )
 
 

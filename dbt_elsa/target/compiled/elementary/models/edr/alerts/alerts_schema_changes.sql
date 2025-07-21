@@ -2,7 +2,7 @@
 
 
 with elementary_test_results as (
-    select * from "elsa"."bronze_tec_elsa"."elementary_test_results"
+    select * from "elsa"."tec_elsa"."elementary_test_results"
 ),
 
 alerts_schema_changes as (

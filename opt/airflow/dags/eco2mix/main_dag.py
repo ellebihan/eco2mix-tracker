@@ -32,7 +32,7 @@ with DAG(
 
     dbt_run = BashOperator(
         task_id='dbt_run',
-        bash_command='cd /opt/airflow/dbt_elsa && dbt run --select bronze'
+        bash_command='cd /opt/airflow/dbt_elsa && dbt run --select bronze && dbt run --select silver'
     )
 
     dbt_test = BashOperator(

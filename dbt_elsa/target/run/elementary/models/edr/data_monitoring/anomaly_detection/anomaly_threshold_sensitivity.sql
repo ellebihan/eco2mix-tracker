@@ -1,5 +1,5 @@
 
-  create view "elsa"."bronze_tec_elsa"."anomaly_threshold_sensitivity__dbt_tmp"
+  create view "elsa"."tec_elsa"."anomaly_threshold_sensitivity__dbt_tmp"
     
     
   as (
@@ -7,7 +7,7 @@
 
 with metrics_anomaly_score as (
 
-    select * from "elsa"."bronze_tec_elsa"."metrics_anomaly_score"
+    select * from "elsa"."tec_elsa"."metrics_anomaly_score"
 
 ),
 
