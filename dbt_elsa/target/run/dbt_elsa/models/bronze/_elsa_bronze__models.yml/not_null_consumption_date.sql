@@ -13,7 +13,7 @@
 
 
 select date
-from "elsa"."bronze"."consumption"
+from "dbelsa"."bronze"."consumption"
 where date is null
 
 

@@ -13,7 +13,7 @@
 
 
 select created_at
-from "elsa"."silver"."consumption_history"
+from "dbelsa"."bronze"."consumption_history"
 where created_at is null
 
 

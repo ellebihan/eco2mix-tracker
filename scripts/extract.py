@@ -3,7 +3,7 @@ import requests
 import sys
 import os
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from common.utils.source_extractors import MetadonneesApiExtractor
 from common.config import load_config
@@ -65,12 +65,22 @@ def extract_data(config, domain):
             continue
             
         try:
+            print(f"params :{params}")
             extractor = extractor_class()
             filepath = extractor.download(domain, source)
             print(f"Data extracted from {source_name} and saved to {filepath}")
         except Exception as e:
             print(f"Error extracting data from {source_name}: {str(e)}")
 
+# Nouveau wrapper compatible Airflow
+def run_extraction_for_airflow(domain='rte', config_path='datasources.yaml'):
+    try:
+        config = load_config(config_path)
+    except Exception as e:
+        print(f"Error loading config file: {str(e)}")
+        raise
+    extract_data(config, domain)
+    
 # Test manuel
 if __name__ == "__main__":
     # Précise les arguments à utiliser (optionnel si arguments par défaut spécifiés)

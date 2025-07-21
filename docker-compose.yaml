@@ -56,12 +56,15 @@ services:
       AIRFLOW__CORE__EXECUTOR: ${AIRFLOW_EXECUTOR}
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@db-airflow/airflow
       AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
+      AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
       PYTHONPATH: ${PYTHON_PATH}
     volumes:
       - ./dags:/opt/airflow/dags                  # tes DAGs Airflow
       - ./dbt_elsa:/opt/airflow/dbt_elsa          # ton projet dbt (avec dbt_project.yml)
       - ./dbt_elsa/profiles.yml:/home/airflow/.dbt/profiles.yml  # fichier profiles.yml attendu par dbt
       - ./scripts:/opt/airflow/scripts            # si tu as des scripts Python à exécuter
+      - ./common:/opt/airflow/common            # d'autres scripts Python à exécuter
+      - ./datasources.yaml:/opt/airflow/datasources.yaml  # les datasources
     ports:
       - "8080:8080"
     command: webserver
@@ -78,19 +81,40 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: ${AIRFLOW_EXECUTOR}
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@db-airflow/airflow
+      AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
       PYTHONPATH: ${PYTHON_PATH}
     volumes:
-      - ./dags:/opt/airflow/dags                  # tes DAGs Airflow
-      - ./dbt_elsa:/opt/airflow/dbt_elsa          # ton projet dbt (avec dbt_project.yml)
-      - ./dbt_elsa/profiles.yml:/home/airflow/.dbt/profiles.yml  # fichier profiles.yml attendu par dbt
-      - ./scripts:/opt/airflow/scripts            # si tu as des scripts Python à exécuter
+      - ./dags:/opt/airflow/dags  # tes DAGs Airflow
+      - ./dbt_elsa:/opt/airflow/dbt_elsa # ton projet dbt (avec dbt_project.yml)
+      - ./dbt_elsa/profiles.yml:/home/airflow/.dbt/profiles.yml # fichier profiles.yml attendu par dbt
+      - ./scripts:/opt/airflow/scripts  # si tu as des scripts Python à exécuter
+      - ./common:/opt/airflow/common  # d'autres scripts Python à exécuter
+      - ./datasources.yaml:/opt/airflow/datasources.yaml  # les datasources
     command: scheduler
     networks:
       - app-network
 
+  superset:
+    image: apache/superset
+    container_name: superset
+    environment:
+      - SUPERSET_SECRET_KEY: ${AIRFLOW__WEBSERVER__SECRET_KEY}
+    ports:
+      - "8088:8088"
+    volumes:
+      - superset_home:/app/superset_home
+    command: >
+      /bin/bash -c "
+      superset db upgrade &&
+      superset fab create-admin --username admin --firstname Superset --lastname Admin --email admin@superset.com --password admin &&
+      superset init &&
+      superset run -h 0.0.0.0 -p 8088
+      "
+
 volumes:
   db_main_data:
   db_airflow_data:
+  superset_home:
 
 networks:
   app-network:
