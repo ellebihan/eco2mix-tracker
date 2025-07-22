@@ -7,7 +7,7 @@ class DatabaseClient():
             dbname=os.getenv('PG_DB_NAME'),
             user=os.getenv('PG_DB_USER'),
             password=os.getenv('PG_DB_PWD'),
-            host=os.getenv('PG_DB_HOST'),
+            host=os.getenv('PG_DB_HOST', 'db'),
             port=os.getenv('PG_DB_PORT')
         )
         self.connection.autocommit = autocommit

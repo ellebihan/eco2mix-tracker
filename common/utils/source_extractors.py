@@ -48,7 +48,6 @@ class MetadonneesApiExtractor(SourceExtractor):
         # Extraire les records
         for key in response_path.split("."):
             data = data[key]
-            print(data)
         # Extraire uniquement les champs "fields"
         fields_list = data
         # fields_list = [r["fields"] for r in records if "fields" in r]
