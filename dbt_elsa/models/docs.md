@@ -16,11 +16,12 @@
  time
 {% enddocs %}
 
-{% docs filiere %}
- filiere
+{% docs date_time %}
+ date_time
 {% enddocs %}
 
 # Energy
+# Bronze
 {% docs gaz %}
  Production for gaz energy in TWH
 {% enddocs %}
@@ -53,12 +54,25 @@
  Production for other energy in TWH
 {% enddocs %}
 
-{% docs prevision_j %}
- Pprevision_j
+# Silver
+{% docs sector %}
+ sector
 {% enddocs %}
 
-{% docs prevision_j1 %}
- prevision_j1
+{% docs rate_co2 %}
+ rate_co2
+{% enddocs %}
+
+{% docs consumption %}
+ consumption
+{% enddocs %}
+
+{% docs consumption_forecast_d %}
+ consumption_forecast_d
+{% enddocs %}
+
+{% docs consumption_forecast_d1 %}
+ consumption_forecast_d1
 {% enddocs %}
 
 {% docs volume %}

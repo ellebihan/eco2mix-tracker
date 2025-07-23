@@ -42,7 +42,7 @@ select * from communes
 Les sources définissent les données brutes qui sont utilisées dans votre projet dbt. Elles permettent de créer un graphe de dépendances et rendent vos requêtes SQL plus lisibles.
 
 ```yaml
-# models/bronze/_odis_bronze__sources.yml
+# models/bronze/_elsa_bronze__sources.yml
 version: 2
 
 sources:
@@ -59,7 +59,7 @@ sources:
 dbt permet de tester vos modèles pour assurer la qualité des données :
 
 ```yaml
-# models/bronze/_odis_bronze__models
+# models/bronze/_elsa_bronze__models
 version: 2
 
 models:
@@ -88,7 +88,7 @@ Commencez par renseigner le nom et la description de votre table issue du model 
 Power User va détecter l'emplacement de la table/view dans Postgre et de sa documentation, puis synchroniser
 
 ```yaml
-# models/bronze/_odis_bronze__models
+# models/bronze/_elsa_bronze__models
   - name: logement_logements_sociaux_departement
     description: CSV contenant les logements sociaux déclarés par départements
 ```
@@ -189,7 +189,7 @@ dbt build --full-refresh
 
 ```bash
 # Créer un fichier JSON recensant toutes les tables, colonnes et connexions de votre projet DBT
-# Path : 13_odis/dbt_odis/target/catalog.json
+# Path : dbt_elsa/target/catalog.json
 dbt docs generate
 
 # Lancer une page web en Localhost montrant toutes les informations de votre projet DBT, CTRL+C pour arrêter la webpage
@@ -210,11 +210,11 @@ dbt clean
 Fichier de configuration du projet dbt :
 
 ```yaml
-name: "dbt_odis"
+name: "dbt_elsa"
 version: "1.0.0"
 
 # This setting configures which "profile" dbt uses for this project.
-profile: "dbt_odis"
+profile: "dbt_elsa"
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -231,7 +231,7 @@ clean-targets: # directories to be removed by `dbt clean`
   - "dbt_packages"
 
 models:
-  dbt_odis:
+  dbt_elsa:
     # Config indicated by + and applies to all files under models/example/
     bronze:
       +schema: bronze
@@ -243,28 +243,28 @@ models:
 Fichier de configuration de la connexion à l’entrepôt de données :
 
 ```yaml
-dbt_odis:
+dbt_elsa:
   target: dev_live
   outputs:
     dev_live:
-      dbname: odis
+      dbname: elsa
       host: localhost
-      pass: odis
+      pass: elsa
       port: 5432
       schema: bronze
       threads: 16
       type: postgres
-      user: odis
+      user: elsa
 
     dev_custom:
-      dbname: odis
+      dbname: elsa
       host: localhost
-      pass: odis
+      pass: elsa
       port: 5432
       schema: 'vos_initiales'
       threads: 16
       type: postgres
-      user: odis
+      user: elsa
 ```
 
 ## Bonnes pratiques
