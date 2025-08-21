@@ -2,7 +2,7 @@
 
 with metrics_anomaly_score as (
 
-    select * from "elsa"."tec_elsa"."metrics_anomaly_score"
+    select * from "dbelsa"."tec_elsa"."metrics_anomaly_score"
 
 ),
 

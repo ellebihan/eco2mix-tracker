@@ -133,10 +133,39 @@ services:
     networks:
       - app-network
 
+  db-metabase:
+    image: postgres:17.3
+    container_name: db_metabase
+    environment:
+      POSTGRES_USER: ${PG_METABASE_USER}
+      POSTGRES_PASSWORD: ${PG_METABASE_PWD}
+      POSTGRES_DB: ${PG_METABASE}
+    volumes:
+      - db_metabase_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: ${PG_DB_NAME}
+      MB_DB_PORT: 5432
+      MB_DB_USER: ${PG_DB_USER}
+      MB_DB_PASS: ${PG_DB_PWD}
+      MB_DB_HOST: db
+    depends_on:
+      - db
+    networks:
+      - app-network
+
 volumes:
   db_main_data:
   db_airflow_data:
   superset_home:
+  db_metabase_data:
 
 networks:
   app-network:

@@ -14,7 +14,7 @@ with DAG(
     start_date=datetime(2025, 1, 1),
     schedule_interval="@daily",
     catchup=False,
-    tags=['dbt'],
+    tags=['daily', 'rte'],
 ) as dag:
 
     extract_rte = PythonOperator(

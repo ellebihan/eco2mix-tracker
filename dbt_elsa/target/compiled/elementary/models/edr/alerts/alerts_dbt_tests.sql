@@ -1,7 +1,7 @@
 
 
 with elementary_test_results as (
-    select * from "elsa"."tec_elsa"."elementary_test_results"
+    select * from "dbelsa"."tec_elsa"."elementary_test_results"
 ),
 
 alerts_dbt_tests as (

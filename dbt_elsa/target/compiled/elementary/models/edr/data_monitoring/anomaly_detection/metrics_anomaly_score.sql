@@ -2,7 +2,7 @@
 
 with data_monitoring_metrics as (
 
-    select * from "elsa"."tec_elsa"."data_monitoring_metrics"
+    select * from "dbelsa"."tec_elsa"."data_monitoring_metrics"
 
 ),
 

@@ -4,5 +4,5 @@ sources:
   - name: bronze
     schema: bronze
     tables:
-      - name: consumption
+      - name: hourly_eco2mix
         description: Données raw

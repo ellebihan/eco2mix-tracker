@@ -1,0 +1,102 @@
+version: 2
+
+models:
+  - name: hourly_production_by_sector
+    materialized: table
+    description: >
+      The aim of this table is to organize data production by sector
+    columns:
+      - name: date_time_utc
+        data_type: timestamp
+        description: "{{ doc('date_time_utc') }}"
+        tests:
+          - not_null
+      - name: created_at
+        data_type: timestamp
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: sector
+        data_type: text
+        description: "{{ doc('sector') }}"
+      - name: volume
+        data_type: integer
+        description: "{{ doc('volume') }}"
+  
+  - name: daily_production_by_sector
+    materialized: table
+    description: >
+      The aim of this table is to aggregate sectorial production by day
+    columns:
+      - name: date
+        data_type: date
+        description: "{{ doc('date') }}"
+        tests:
+          - not_null
+      - name: created_at
+        data_type: timestamp
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: sector
+        data_type: text
+        description: "{{ doc('sector') }}"
+      - name: volume
+        data_type: integer
+        description: "{{ doc('volume') }}"
+  
+  - name: hourly_global_metrics
+    materialized: table
+    description: >
+      The aim of this table is to organize data for the metrics that are not splet by sector
+    columns:
+      - name: date_time_utc
+        data_type: timestamp
+        description: "{{ doc('date_time_utc') }}"
+        tests:
+          - not_null
+      - name: created_at
+        data_type: timestamp
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: rate_co2
+        data_type: integer
+        description: "{{ doc('rate_co2') }}"
+      - name: consumption
+        data_type: text
+        description: "{{ doc('consumption') }}"
+      - name: consumption_forecast_d
+        data_type: integer
+        description: "{{ doc('consumption_forecast_d') }}"
+      - name: consumption_forecast_d1
+        data_type: integer
+        description: "{{ doc('consumption_forecast_d1') }}"
+
+  - name: daily_global_metrics
+    materialized: table
+    description: >
+      The aim of this table is to aggregate data for metrics not splet by sector
+    columns:
+      - name: date
+        data_type: date
+        description: "{{ doc('date') }}"
+        tests:
+          - not_null
+      - name: created_at
+        data_type: timestamp
+        description: "{{ doc('created_at') }}"
+        tests:
+          - not_null
+      - name: rate_co2
+        data_type: integer
+        description: "{{ doc('rate_co2') }}"
+      - name: consumption
+        data_type: text
+        description: "{{ doc('consumption') }}"
+      - name: consumption_forecast_d
+        data_type: integer
+        description: "{{ doc('consumption_forecast_d') }}"
+      - name: consumption_forecast_d1
+        data_type: integer
+        description: "{{ doc('consumption_forecast_d1') }}"

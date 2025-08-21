@@ -1,9 +1,9 @@
-
 SELECT
     id,
     created_at,
-    (data->>'date')::date AS date,
-    (data->>'heure')::time AS heure,   
+    (data->>'date')::date AS date_utc2,
+    (data->>'heure')::time AS heure_utc2,   
+    (data->>'date_heure')::timestamp AS date_heure_utc,   
     (data->>'gaz')::int AS gaz,
     (data->>'nucleaire')::int AS nucleaire,
     (data->>'charbon')::int AS charbon,

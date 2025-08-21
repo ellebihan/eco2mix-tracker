@@ -1,7 +1,7 @@
 -- indexes are not supported in all warehouses, relevant to postgres only
 
 
--- depends_on: "elsa"."tec_elsa"."elementary_test_results"
+-- depends_on: "dbelsa"."tec_elsa"."elementary_test_results"
 select * from (
             select
             
