@@ -16,8 +16,8 @@
  time
 {% enddocs %}
 
-{% docs date_time %}
- date_time
+{% docs date_time_utc %}
+ date_time_utc
 {% enddocs %}
 
 # Energy

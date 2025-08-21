@@ -6,9 +6,9 @@ models:
     description: >
       The aim of this table is to organize data production by sector
     columns:
-      - name: date_time
+      - name: date_time_utc
         data_type: timestamp
-        description: "{{ doc('date_time') }}"
+        description: "{{ doc('date_time_utc') }}"
         tests:
           - not_null
       - name: created_at
@@ -50,9 +50,9 @@ models:
     description: >
       The aim of this table is to organize data for the metrics that are not splet by sector
     columns:
-      - name: date_time
+      - name: date_time_utc
         data_type: timestamp
-        description: "{{ doc('date_time') }}"
+        description: "{{ doc('date_time_utc') }}"
         tests:
           - not_null
       - name: created_at

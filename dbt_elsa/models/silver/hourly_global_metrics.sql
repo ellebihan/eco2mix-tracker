@@ -9,7 +9,7 @@ SELECT
     date_time_utc,
     created_at,
     'total' AS sector,
-    SUM(rate_co2) AS rate_co2,
+    AVG(rate_co2) AS rate_co2,
     SUM(consumption_d) AS consumption_d,
     SUM(consumption_forecast_d) AS consumption_forecast_d,
     SUM(consumption_forecast_d1) AS consumption_forecast_d1
