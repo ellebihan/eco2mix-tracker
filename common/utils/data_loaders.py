@@ -3,6 +3,8 @@ from pathlib import Path
 from common.utils.database_client import DatabaseClient
 from psycopg2.extras import Json
 import json
+from airflow.providers.postgres.hooks.postgres import PostgresHook
+import os
 
 class DataLoader(ABC):
     """Abstract class defining a datasource extractor.
@@ -14,6 +16,19 @@ class DataLoader(ABC):
         pass
 
 class JsonDataLoader(DataLoader):
+    def __init__(self, use_airflow=False):
+        if use_airflow:
+            hook = PostgresHook(postgres_conn_id="pg_main")
+            self.conn = hook.get_conn()
+        else:
+            import psycopg2
+            self.conn = psycopg2.connect(
+                dbname=os.getenv("PG_DB_NAME"),
+                user=os.getenv("PG_DB_USER"),
+                password=os.getenv("PG_DB_PWD"),
+                host=os.getenv("PG_DB_HOST", "localhost"),
+                port=os.getenv("PG_DB_PORT", "5432"),
+            )
     def load(self, domain: str, source_config):
         dataset_name = source_config['name']
 

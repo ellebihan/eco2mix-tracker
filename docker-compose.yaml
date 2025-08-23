@@ -59,6 +59,8 @@ services:
       POSTGRES_USER: ${PG_DB_USER}
       POSTGRES_PASSWORD: ${PG_DB_PWD}
       POSTGRES_DB: ${PG_DB_NAME}
+      PG_DB_HOST: db
+      PG_DB_PORT: 5432
       AIRFLOW__CORE__EXECUTOR: ${AIRFLOW_EXECUTOR}
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@db-airflow/airflow
       AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
@@ -89,6 +91,8 @@ services:
       POSTGRES_USER: ${PG_DB_USER}
       POSTGRES_PASSWORD: ${PG_DB_PWD}
       POSTGRES_DB: ${PG_DB_NAME}
+      PG_DB_HOST: db
+      PG_DB_PORT: 5432
       AIRFLOW__CORE__EXECUTOR: ${AIRFLOW_EXECUTOR}
       AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@db-airflow/airflow
       AIRFLOW__WEBSERVER__SECRET_KEY: ${SECRET_KEY}

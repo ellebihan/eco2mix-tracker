@@ -3,6 +3,7 @@ import argparse
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from airflow.hooks.base import BaseHook
 from common.config import load_config
 from common.utils.data_loaders import JsonDataLoader
 from dotenv import load_dotenv
@@ -51,9 +52,21 @@ def load_data(config, domain=None):
             print(f"Error loading data from {source_name}: {str(e)}")
 
 # Nouveau wrapper compatible Airflow
-def run_loading_for_airflow(domain='rte', config_path='datasources.yaml'):
+def run_loading_for_airflow(domain='rte', config_path='datasources.yaml', conn_id="pg_main"):
+    use_airflow=True
     try:
+        # Charger config yaml
         config = load_config(config_path)
+
+        # Récupérer la connexion Airflow
+        conn = BaseHook.get_connection(conn_id)
+        db_params = {
+            "dbname": conn.schema,
+            "user": conn.login,
+            "password": conn.password,
+            "host": conn.host,
+            "port": conn.port or 5432,
+        }
     except Exception as e:
         print(f"Error loading config file: {str(e)}")
         raise

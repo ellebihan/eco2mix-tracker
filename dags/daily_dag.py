@@ -26,7 +26,7 @@ with DAG(
     load_rte = PythonOperator(
         task_id="load_rte",
         python_callable=run_loading_for_airflow,
-        op_kwargs={"domain": "rte", "config_path": "/opt/airflow/datasources.yaml"},
+        op_kwargs={"domain": "rte", "config_path": "/opt/airflow/datasources.yaml", "conn_id": "pg_main"},
     )
 
     dbt_run = BashOperator(
